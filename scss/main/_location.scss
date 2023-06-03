@@ -1,0 +1,43 @@
+#main-location {
+	padding: 100px 0;
+
+	.inner-container {
+		width: $mainContainer;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		h1 {
+			@include mainTitle();
+			line-height: 1.5;
+			text-align: right;
+
+			span {
+				display: block;
+				margin-right: -30px;
+			}
+		}
+
+		.inner-content {
+			width: 500px;
+			margin-left: 70px;
+
+			p {
+				@include mainSubTitle();
+			}
+
+			.btn-more {
+				display: block;
+				width: 120px;
+				height: 35px;
+				font-size: 14px;
+				line-height: 35px;
+				color: #fff;
+				background: #e98508;
+				text-align: center;
+				margin-top: 30px;
+			}
+		}
+	}
+}
