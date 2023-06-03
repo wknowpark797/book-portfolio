@@ -8,7 +8,7 @@ $slideWidth: 250px;
 	padding: 110px 0;
 
 	.inner-container {
-		width: calc(100% - 160px);
+		width: calc(calc(calc(100% - $mainContainer) / 2) + $mainContainer);
 		display: flex;
 		align-items: center;
 
@@ -41,6 +41,8 @@ $slideWidth: 250px;
 		.slide-wrap {
 			flex: 1;
 			overflow: hidden;
+			padding-bottom: 85px;
+			position: relative;
 
 			.panel {
 				width: calc($slideWidth * $slideLength);
@@ -76,11 +78,12 @@ $slideWidth: 250px;
 			}
 
 			.arrow {
-				width: calc(100% - 160px);
+				position: absolute;
+				bottom: 0;
+				left: calc($mainContainer - 430px);
 				display: flex;
-				justify-content: flex-end;
+				align-items: center;
 				gap: 10px;
-				margin-top: 50px;
 
 				> button {
 					display: flex;
