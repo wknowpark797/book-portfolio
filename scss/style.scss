@@ -2,6 +2,18 @@
 $mobile: 768px;
 $mainContainer: 1200px;
 
+@mixin mainTitle($size: 30px, $weight: bold, $color: #333) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+}
+@mixin mainSubTitle($size: 16px, $weight: normal, $line-height: 1.5, $color: #777) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line-height;
+	color: $color;
+}
+
 // common
 @import 'common/reset';
 @import 'common/header';
