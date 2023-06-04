@@ -85,7 +85,7 @@
 	}
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: $tablet) {
 	#main-youtube-list {
 		.inner-container {
 			.inner-content {
@@ -108,7 +108,7 @@
 	}
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: $mobile) {
 	#main-youtube-list {
 		.inner-container {
 			.inner-content {

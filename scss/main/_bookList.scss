@@ -126,7 +126,7 @@ $slideWidth: 250px;
 	}
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: $tablet) {
 	#main-book-list {
 		.inner-container {
 			display: block;

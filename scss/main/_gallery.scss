@@ -85,7 +85,7 @@
 	}
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: $tablet) {
 	#main-gallery {
 		.inner-container {
 			.box-wrap {
@@ -113,7 +113,7 @@
 	}
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: $mobile) {
 	#main-gallery {
 		.inner-container {
 			.box-wrap {

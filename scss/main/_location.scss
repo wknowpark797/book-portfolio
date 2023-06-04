@@ -52,7 +52,7 @@
 	}
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: $tablet) {
 	#main-location {
 		.inner-container {
 			display: block;
