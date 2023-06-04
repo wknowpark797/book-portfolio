@@ -78,14 +78,14 @@
 		.inner-container {
 			.inner-content {
 				.video-wrap {
-					width: 60%;
+					width: 70%;
 				}
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 999px) {
 	#main-youtube-list {
 		.inner-container {
 			.inner-content {
@@ -98,13 +98,17 @@
 				.video-wrap {
 					width: 100%;
 					margin-top: 30px;
+
+					article {
+						height: 230px;
+					}
 				}
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 599px) {
 	#main-youtube-list {
 		.inner-container {
 			.inner-content {
