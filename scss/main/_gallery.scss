@@ -76,3 +76,12 @@
 		}
 	}
 }
+
+@media screen and (max-width: $mainContainer) {
+	#main-gallery {
+		.inner-container {
+			width: 100%;
+			padding: 0 $responsePadding;
+		}
+	}
+}

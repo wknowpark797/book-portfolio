@@ -48,3 +48,12 @@
 		}
 	}
 }
+
+@media screen and (max-width: $mainContainer) {
+	#header {
+		.inner-header {
+			width: 100%;
+			padding: 0 $responsePadding;
+		}
+	}
+}

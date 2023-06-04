@@ -105,3 +105,19 @@ $slideWidth: 500px;
 		}
 	}
 }
+
+@media screen and (max-width: $mainContainer) {
+	#main-comment-list {
+		.inner-container {
+			width: 100%;
+			padding: 0 $responsePadding;
+
+			.slide-wrap {
+				.arrow {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+}

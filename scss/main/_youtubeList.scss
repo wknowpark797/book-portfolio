@@ -55,3 +55,12 @@
 		}
 	}
 }
+
+@media screen and (max-width: $mainContainer) {
+	#main-youtube-list {
+		.inner-container {
+			width: 100%;
+			padding: 0 $responsePadding;
+		}
+	}
+}

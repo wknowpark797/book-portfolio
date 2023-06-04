@@ -42,3 +42,12 @@
 		}
 	}
 }
+
+@media screen and (max-width: $mainContainer) {
+	#main-location {
+		.inner-container {
+			width: 100%;
+			padding: 0 $responsePadding;
+		}
+	}
+}

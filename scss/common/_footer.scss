@@ -69,3 +69,12 @@
 		}
 	}
 }
+
+@media screen and (max-width: $mainContainer) {
+	#footer {
+		.inner-footer {
+			width: 100%;
+			padding: 0 $responsePadding;
+		}
+	}
+}
