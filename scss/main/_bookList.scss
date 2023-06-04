@@ -125,3 +125,17 @@ $slideWidth: 250px;
 		}
 	}
 }
+
+@media screen and (max-width: 999px) {
+	#main-book-list {
+		.inner-container {
+			display: block;
+
+			.title-wrap {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 70px;
+			}
+		}
+	}
+}
