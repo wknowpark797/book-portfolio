@@ -45,6 +45,8 @@
 
 		.btn-menu {
 			display: none;
+			font-size: 24px;
+			color: #333;
 		}
 	}
 }
@@ -54,6 +56,21 @@
 		.inner-header {
 			width: 100%;
 			padding: 0 $responsePadding;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	#header {
+		.inner-header {
+			.gnb,
+			.login-wrap {
+				display: none;
+			}
+
+			.btn-menu {
+				display: block;
+			}
 		}
 	}
 }
