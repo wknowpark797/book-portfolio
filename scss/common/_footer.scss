@@ -78,3 +78,19 @@
 		}
 	}
 }
+
+@media screen and (max-width: 650px) {
+	#footer {
+		.inner-footer {
+			.bottom {
+				display: block;
+				margin-top: 30px;
+
+				.gnb {
+					gap: 15px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
