@@ -37,17 +37,19 @@
 			margin-top: 25px;
 
 			p {
-				@include mainSubTitle();
+				flex: 1;
 				margin-right: 50px;
+				@include mainSubTitle();
 			}
 
 			.video-wrap {
+				width: 720px;
 				display: flex;
 				gap: 25px;
 				margin-top: -20px;
 
 				article {
-					width: 350px;
+					flex: 1;
 					height: 200px;
 					background: #777;
 				}
@@ -61,6 +63,61 @@
 		.inner-container {
 			width: 100%;
 			padding: 0 $responsePadding;
+
+			.inner-content {
+				p {
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	#main-youtube-list {
+		.inner-container {
+			.inner-content {
+				.video-wrap {
+					width: 60%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	#main-youtube-list {
+		.inner-container {
+			.inner-content {
+				display: block;
+
+				p {
+					margin-right: 0;
+				}
+
+				.video-wrap {
+					width: 100%;
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#main-youtube-list {
+		.inner-container {
+			.inner-content {
+				.video-wrap {
+					display: block;
+
+					article {
+						&:not(:first-child) {
+							margin-top: 25px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
