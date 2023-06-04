@@ -29,7 +29,8 @@ $slideWidth: 250px;
 				display: block;
 				width: 120px;
 				height: 35px;
-				font-size: 14px;
+				font-size: 16px;
+				font-weight: 300;
 				line-height: 35px;
 				color: #fff;
 				background: #e98508;
@@ -65,13 +66,15 @@ $slideWidth: 250px;
 						margin-top: 15px;
 
 						h2 {
-							font-size: 20px;
+							font-size: 18px;
+							font-weight: 700;
+							color: #333;
 						}
 
 						p {
 							font-size: 14px;
 							color: #777;
-							margin-top: 5px;
+							margin-top: 3px;
 						}
 					}
 				}
@@ -91,6 +94,7 @@ $slideWidth: 250px;
 					align-items: center;
 					width: 35px;
 					height: 35px;
+					cursor: pointer;
 
 					&.prev {
 						background: #d7d7d7;

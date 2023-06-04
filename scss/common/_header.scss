@@ -1,7 +1,7 @@
 #header {
 	.inner-header {
 		width: $mainContainer;
-		height: 65px;
+		height: 70px;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
@@ -10,6 +10,7 @@
 		h1 {
 			> a {
 				font-size: 30px;
+				font-weight: 700;
 				color: #333;
 			}
 		}

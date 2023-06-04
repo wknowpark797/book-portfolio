@@ -47,14 +47,15 @@ $slideWidth: 500px;
 					}
 
 					.info-box {
-						height: 210px;
+						height: 220px;
 						margin-top: -35px;
 						background: #fff;
 						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 						padding: 50px 30px 30px;
 
 						p {
-							font-size: 14px;
+							font-size: 15px;
+							font-weight: 300;
 							line-height: 1.5;
 							color: #777;
 
@@ -66,7 +67,7 @@ $slideWidth: 500px;
 
 							&.user {
 								font-size: 16px;
-								font-weight: bold;
+								font-weight: 700;
 								color: #333;
 								margin: 20px 0 2px 0;
 							}
@@ -89,6 +90,7 @@ $slideWidth: 500px;
 					align-items: center;
 					width: 35px;
 					height: 35px;
+					cursor: pointer;
 
 					&.prev {
 						background: #d7d7d7;
