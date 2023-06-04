@@ -80,6 +80,14 @@ body {
     display: block;
   }
 }
+@media screen and (max-width: 599px) {
+  #header .inner-header h1 > a {
+    font-size: 26px;
+  }
+  #header .inner-header .btn-menu {
+    font-size: 20px;
+  }
+}
 #footer {
   background: #555;
   padding: 50px 0;
@@ -152,6 +160,14 @@ body {
   #footer .inner-footer .bottom .gnb {
     gap: 15px;
     margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 599px) {
+  #footer .inner-footer .top h1 > a {
+    font-size: 26px;
+  }
+  #footer .inner-footer .bottom p {
+    font-size: 12px;
   }
 }
 @font-face {
@@ -358,6 +374,11 @@ body {
     margin-bottom: 70px;
   }
 }
+@media screen and (max-width: 599px) {
+  #main-book-list .inner-container .title-wrap h1 {
+    font-size: 25px;
+  }
+}
 #main-gallery {
   background: #f5f5f5;
   padding: 100px 0;
@@ -455,6 +476,9 @@ body {
   }
 }
 @media screen and (max-width: 599px) {
+  #main-gallery .inner-container .title-wrap h1 {
+    font-size: 25px;
+  }
   #main-gallery .inner-container .box-wrap .inner-box .flex-box {
     height: 66.6667%;
     flex-direction: column;
@@ -555,6 +579,9 @@ body {
   }
 }
 @media screen and (max-width: 599px) {
+  #main-youtube-list .inner-container .title-wrap h1 {
+    font-size: 25px;
+  }
   #main-youtube-list .inner-container .inner-content .video-wrap {
     display: block;
   }
@@ -668,6 +695,11 @@ body {
     right: 0;
   }
 }
+@media screen and (max-width: 599px) {
+  #main-comment-list .inner-container .title-wrap h1 {
+    font-size: 25px;
+  }
+}
 @media screen and (max-width: 520px) {
   #main-comment-list .inner-container .slide-wrap .panel {
     width: 500%;
@@ -743,6 +775,11 @@ body {
     width: 100%;
     margin-left: 0;
     margin-top: 15px;
+  }
+}
+@media screen and (max-width: 599px) {
+  #main-location .inner-container h1 {
+    font-size: 25px;
   }
 }
 

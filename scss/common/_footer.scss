@@ -94,3 +94,23 @@
 		}
 	}
 }
+
+@media screen and (max-width: $mobile) {
+	#footer {
+		.inner-footer {
+			.top {
+				h1 {
+					> a {
+						font-size: 26px;
+					}
+				}
+			}
+
+			.bottom {
+				p {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

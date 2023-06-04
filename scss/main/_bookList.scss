@@ -139,3 +139,15 @@ $slideWidth: 250px;
 		}
 	}
 }
+
+@media screen and (max-width: $mobile) {
+	#main-book-list {
+		.inner-container {
+			.title-wrap {
+				h1 {
+					font-size: 25px;
+				}
+			}
+		}
+	}
+}

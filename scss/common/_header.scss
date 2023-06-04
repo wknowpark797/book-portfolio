@@ -74,3 +74,19 @@
 		}
 	}
 }
+
+@media screen and (max-width: $mobile) {
+	#header {
+		.inner-header {
+			h1 {
+				> a {
+					font-size: 26px;
+				}
+			}
+
+			.btn-menu {
+				font-size: 20px;
+			}
+		}
+	}
+}

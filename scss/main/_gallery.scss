@@ -116,6 +116,12 @@
 @media screen and (max-width: $mobile) {
 	#main-gallery {
 		.inner-container {
+			.title-wrap {
+				h1 {
+					font-size: 25px;
+				}
+			}
+
 			.box-wrap {
 				.inner-box {
 					.flex-box {

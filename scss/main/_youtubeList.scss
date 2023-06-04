@@ -111,6 +111,12 @@
 @media screen and (max-width: $mobile) {
 	#main-youtube-list {
 		.inner-container {
+			.title-wrap {
+				h1 {
+					font-size: 25px;
+				}
+			}
+
 			.inner-content {
 				.video-wrap {
 					display: block;

@@ -122,6 +122,18 @@ $slideWidth: 500px;
 	}
 }
 
+@media screen and (max-width: $mobile) {
+	#main-comment-list {
+		.inner-container {
+			.title-wrap {
+				h1 {
+					font-size: 25px;
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 520px) {
 	#main-comment-list {
 		.inner-container {

@@ -74,3 +74,13 @@
 		}
 	}
 }
+
+@media screen and (max-width: $mobile) {
+	#main-location {
+		.inner-container {
+			h1 {
+				font-size: 25px;
+			}
+		}
+	}
+}
