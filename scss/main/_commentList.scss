@@ -121,3 +121,20 @@ $slideWidth: 500px;
 		}
 	}
 }
+
+@media screen and (max-width: 520px) {
+	#main-comment-list {
+		.inner-container {
+			.slide-wrap {
+				.panel {
+					width: calc(100% * $slideLength);
+					gap: 18px;
+
+					> div {
+						width: calc(100% / $slideLength);
+					}
+				}
+			}
+		}
+	}
+}
