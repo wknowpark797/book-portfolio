@@ -5,7 +5,7 @@ let membersTags = '';
 let directorsTags = '';
 
 // 멤버 데이터 Fetching
-fetch('/DB/members.json')
+fetch('DB/members.json')
 	.then((res) => {
 		return res.json();
 	})
@@ -35,7 +35,7 @@ fetch('/DB/members.json')
 	});
 
 // 디렉터 데이터 Fetching
-fetch('/DB/members.json')
+fetch('DB/members.json')
 	.then((res) => {
 		return res.json();
 	})
