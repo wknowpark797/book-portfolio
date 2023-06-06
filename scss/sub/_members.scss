@@ -61,9 +61,16 @@
 					width: 210px;
 					height: 320px;
 					background: #eee;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
 				}
 
 				.info-box {
+					width: 100%;
 					position: absolute;
 
 					p {
@@ -239,7 +246,6 @@
 					flex: 1;
 					display: flex;
 					flex-wrap: wrap;
-					justify-content: space-between;
 					gap: 20px;
 
 					article {
@@ -250,6 +256,12 @@
 						.img-box {
 							width: 100%;
 							height: 230px;
+
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+							}
 						}
 
 						.info-box {

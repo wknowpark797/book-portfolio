@@ -1036,7 +1036,13 @@ body {
   height: 320px;
   background: #eee;
 }
+.members .intro-wrap .img-wrap article .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .members .intro-wrap .img-wrap article .info-box {
+  width: 100%;
   position: absolute;
 }
 .members .intro-wrap .img-wrap article .info-box p {
@@ -1175,7 +1181,6 @@ body {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 20px;
 }
 .members .intro-person .inner-person .inner-container .person-wrap article {
@@ -1186,6 +1191,11 @@ body {
 .members .intro-person .inner-person .inner-container .person-wrap article .img-box {
   width: 100%;
   height: 230px;
+}
+.members .intro-person .inner-person .inner-container .person-wrap article .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .members .intro-person .inner-person .inner-container .person-wrap article .info-box {
   text-align: center;
