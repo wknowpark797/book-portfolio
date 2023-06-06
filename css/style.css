@@ -130,6 +130,7 @@ body {
 }
 #footer .inner-footer .bottom .gnb {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 30px;
 }
@@ -152,19 +153,24 @@ body {
     padding: 0 20px;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 999px) {
   #footer .inner-footer .bottom {
     display: block;
-    margin-top: 30px;
   }
   #footer .inner-footer .bottom .gnb {
-    gap: 15px;
-    margin-bottom: 10px;
+    gap: 20px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 599px) {
   #footer .inner-footer .top h1 > a {
-    font-size: 26px;
+    font-size: 25px;
+  }
+  #footer .inner-footer .bottom .gnb {
+    gap: 15px;
+  }
+  #footer .inner-footer .bottom .gnb > li a {
+    font-size: 14px;
   }
   #footer .inner-footer .bottom p {
     font-size: 12px;
