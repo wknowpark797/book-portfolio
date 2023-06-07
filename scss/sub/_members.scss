@@ -492,7 +492,11 @@
 				width: 100%;
 				margin-left: 0;
 				background: #f7f7f7;
-				padding: 30px 20px;
+				padding: 35px;
+
+				ul {
+					margin-top: 20px;
+				}
 			}
 		}
 
@@ -531,16 +535,30 @@
 
 @media screen and (max-width: $mobile) {
 	.members {
+		.sub-visual {
+			figure {
+				height: 240px;
+				margin-bottom: -110px;
+			}
+
+			.title-wrap {
+				.bread-crumb {
+					font-size: 14px;
+				}
+
+				h1 {
+					font-size: 40px;
+				}
+			}
+		}
+
 		.intro-wrap {
-			margin: 120px 0;
+			margin: 0 0 100px;
 
 			.img-wrap {
-				display: block;
 				padding-bottom: 50px;
 
 				article {
-					width: 100%;
-
 					.info-box {
 						width: 100%;
 						position: relative;
@@ -549,10 +567,6 @@
 
 						p {
 							font-size: 16px;
-
-							&.name {
-								font-size: 20px;
-							}
 						}
 
 						&::before {
@@ -568,8 +582,6 @@
 					}
 
 					&:last-child {
-						margin-top: 35px;
-
 						.info-box {
 							bottom: auto;
 							right: auto;
@@ -598,11 +610,12 @@
 			}
 
 			.inner-person {
+				padding: 70px 0;
 				.inner-container {
 					display: block;
 
 					.left {
-						padding: 30px 20px;
+						padding: 35px;
 
 						h2 {
 							font-size: 18px;
