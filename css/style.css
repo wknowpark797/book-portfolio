@@ -1433,6 +1433,12 @@ body {
   .members .intro-person .inner-person .inner-container .left .btn-more {
     margin-top: 35px;
   }
+  .members .company-wrap {
+    padding: 70px 0;
+  }
+  .members .company-wrap .inner-container ul li i {
+    font-size: 38px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
