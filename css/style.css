@@ -1346,7 +1346,7 @@ body {
     width: 100%;
     margin-left: 0;
     background: #f7f7f7;
-    padding: 35px;
+    padding: 35px 20px;
   }
   .members .intro-wrap .inner-wrap ul {
     margin-top: 20px;
@@ -1428,7 +1428,7 @@ body {
     display: block;
   }
   .members .intro-person .inner-person .inner-container .left {
-    padding: 35px;
+    padding: 35px 20px;
   }
   .members .intro-person .inner-person .inner-container .left h2 {
     font-size: 18px;
