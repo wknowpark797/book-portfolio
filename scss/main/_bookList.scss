@@ -1,5 +1,5 @@
 $slideLength: 5;
-$slideWidth: 250px;
+$slideWidth: 220px;
 
 #main-book-list {
 	display: flex;
@@ -25,25 +25,35 @@ $slideWidth: 250px;
 				margin-top: 15px;
 			}
 
-			.btn-more {
-				display: block;
-				width: 130px;
-				height: 40px;
-				font-size: 14px;
-				font-weight: 300;
-				line-height: 40px;
-				color: #fff;
-				background: #4eb3b3;
-				text-align: center;
+			.arrow {
+				display: flex;
+				align-items: center;
+				gap: 10px;
 				margin-top: 35px;
+
+				> button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 35px;
+					height: 35px;
+					cursor: pointer;
+
+					&.prev {
+						background: #d7d7d7;
+						color: #333;
+					}
+					&.next {
+						background: #333;
+						color: #d7d7d7;
+					}
+				}
 			}
 		}
 
 		.slide-wrap {
 			flex: 1;
 			overflow: hidden;
-			padding-bottom: 85px;
-			position: relative;
 
 			.panel {
 				width: calc($slideWidth * $slideLength);
@@ -57,7 +67,7 @@ $slideWidth: 250px;
 
 					.img-box {
 						width: 100%;
-						height: 310px;
+						height: 280px;
 						background: #777;
 						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 
@@ -84,75 +94,6 @@ $slideWidth: 250px;
 							margin-top: 3px;
 						}
 					}
-				}
-			}
-
-			.arrow {
-				position: absolute;
-				bottom: 0;
-				left: calc($mainContainer - 430px);
-				display: flex;
-				align-items: center;
-				gap: 10px;
-
-				> button {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 35px;
-					height: 35px;
-					cursor: pointer;
-
-					&.prev {
-						background: #d7d7d7;
-						color: #333;
-					}
-					&.next {
-						background: #333;
-						color: #d7d7d7;
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: $mainContainer) {
-	#main-book-list {
-		.inner-container {
-			width: 100%;
-			padding: 0 $responsePadding;
-
-			.slide-wrap {
-				.arrow {
-					left: auto;
-					right: 0;
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: $tablet) {
-	#main-book-list {
-		.inner-container {
-			display: block;
-
-			.title-wrap {
-				width: 100%;
-				margin-right: 0;
-				margin-bottom: 70px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: $mobile) {
-	#main-book-list {
-		.inner-container {
-			.title-wrap {
-				h1 {
-					font-size: 25px;
 				}
 			}
 		}
