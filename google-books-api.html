@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Books API Test</title>
+</head>
+
+<body>
+
+  <div class="wrap"></div>
+
+  <script>
+    const wrap = document.querySelector('.wrap');
+
+    const keyword = 'computer';
+    const maxResults = 40;  // 최대 40
+    const orderBy = 'newest'; // newest, relevance
+    const printType = 'books';  // all, books, magazines
+
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${keyword}&maxResults=${maxResults}&orderBy=${orderBy}&printType=${printType}`;
+
+    let tags = '';
+
+    fetch(url)
+      .then(res => {
+        return res.json();
+      }).then(data => {
+        console.log(data.items);
+
+        data.items.forEach(item => {
+
+          if (!item.volumeInfo.imageLinks) {
+            return;
+          }
+
+          const title = item.volumeInfo.title;
+          const subtitle = item.volumeInfo.subtitle;
+          const authors = item.volumeInfo.authors;
+          const description = item.volumeInfo.description;
+          const categories = item.volumeInfo.categories;
+          const publisher = item.volumeInfo.publisher;
+          const publishedDate = item.volumeInfo.publishedDate;
+          const pageCount = item.volumeInfo.pageCount;
+
+          const smallThumbnail = item.volumeInfo.imageLinks.smallThumbnail;
+          const thumbnail = item.volumeInfo.imageLinks.thumbnail.replace('zoom=1', 'zoom=10');
+
+          tags += `
+            <article>
+              <h2>title: ${title}</h2>
+              <p>subtitle: ${subtitle}</p>
+              <p>authors: ${authors}</p>
+              <p>description: ${description}</p>
+              <p>categories: ${categories}</p>
+              <p>publisher: ${publisher}</p>
+              <p>publishedDate: ${publishedDate}</p>
+              <p>pageCount: ${pageCount}</p>
+
+              <div>smallThumbnail: <img src="${smallThumbnail}" /></div>
+              <div>thumbnail: <img src="${thumbnail}" /></div>
+            </article>
+          `;
+        })
+
+        wrap.innerHTML = tags;
+      });
+  </script>
+</body>
+
+</html>
