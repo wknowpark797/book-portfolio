@@ -556,9 +556,14 @@
 			margin: 0 0 100px;
 
 			.img-wrap {
+				gap: 15px;
 				padding-bottom: 50px;
 
 				article {
+					.img-box {
+						height: 260px;
+					}
+
 					.info-box {
 						width: 100%;
 						position: relative;
@@ -624,6 +629,14 @@
 
 						.btn-more {
 							margin-top: 35px;
+						}
+					}
+
+					.person-wrap {
+						article {
+							.img-box {
+								height: 235px;
+							}
 						}
 					}
 				}

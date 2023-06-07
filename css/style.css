@@ -1385,7 +1385,11 @@ body {
     margin: 0 0 100px;
   }
   .members .intro-wrap .img-wrap {
+    gap: 15px;
     padding-bottom: 50px;
+  }
+  .members .intro-wrap .img-wrap article .img-box {
+    height: 260px;
   }
   .members .intro-wrap .img-wrap article .info-box {
     width: 100%;
@@ -1432,6 +1436,9 @@ body {
   }
   .members .intro-person .inner-person .inner-container .left .btn-more {
     margin-top: 35px;
+  }
+  .members .intro-person .inner-person .inner-container .person-wrap article .img-box {
+    height: 235px;
   }
   .members .company-wrap {
     padding: 70px 0;
