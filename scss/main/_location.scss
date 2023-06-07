@@ -1,30 +1,19 @@
 #main-location {
+	background: #f7f7f7;
 	padding: 100px 0;
 
 	.inner-container {
 		width: $mainContainer;
 		margin: 0 auto;
 		display: flex;
-		justify-content: center;
 		align-items: center;
 
-		h1 {
-			@include mainTitle();
-			line-height: 1.5;
-			text-align: right;
+		.title-wrap {
+			width: 390px;
+			margin-right: 70px;
 
-			span {
-				display: block;
-				margin-right: -30px;
-			}
-		}
-
-		.inner-content {
-			width: 500px;
-			margin-left: 70px;
-
-			p {
-				@include mainSubTitle();
+			h1 {
+				@include mainTitle();
 			}
 
 			.btn-more {
@@ -40,46 +29,53 @@
 				margin-top: 35px;
 			}
 		}
-	}
-}
 
-@media screen and (max-width: $mainContainer) {
-	#main-location {
-		.inner-container {
-			width: 100%;
-			padding: 0 $responsePadding;
-		}
-	}
-}
+		.company-wrap {
+			flex: 1;
+			display: flex;
+			gap: 30px;
 
-@media screen and (max-width: $tablet) {
-	#main-location {
-		.inner-container {
-			display: block;
+			article {
+				flex: 1;
 
-			h1 {
-				text-align: left;
+				.img-box {
+					width: 100%;
+					height: 180px;
+					background: #eee;
+					border-radius: 10px;
+					overflow: hidden;
 
-				span {
-					display: inline-block;
-					margin-right: 0;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
 				}
-			}
 
-			.inner-content {
-				width: 100%;
-				margin-left: 0;
-				margin-top: 15px;
-			}
-		}
-	}
-}
+				.info-box {
+					margin-top: 20px;
 
-@media screen and (max-width: $mobile) {
-	#main-location {
-		.inner-container {
-			h1 {
-				font-size: 25px;
+					h2 {
+						font-size: 18px;
+						font-weight: 700;
+						color: #333;
+					}
+
+					p {
+						font-size: 15px;
+						font-weight: 300;
+						line-height: 1.5;
+						color: #777;
+						margin-top: 5px;
+					}
+
+					a {
+						display: flex;
+						font-size: 30px;
+						color: #4eb3b3;
+						margin-top: 17px;
+					}
+				}
 			}
 		}
 	}
