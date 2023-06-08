@@ -575,7 +575,7 @@ body {
   }
   #main-visual .inner-visual .slide-wrap .panel > div .ratio-wrap {
     width: 120px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   }
   #main-visual .inner-visual .slide-wrap .panel > div:nth-of-type(1) .ratio-wrap {
     margin-top: 0;
@@ -737,9 +737,6 @@ body {
   }
 }
 @media screen and (max-width: 700px) {
-  #main-book-list {
-    padding: 90px 0;
-  }
   #main-book-list .inner-container {
     display: block;
   }
@@ -1062,6 +1059,9 @@ body {
   }
 }
 @media screen and (max-width: 599px) {
+  #main-comment-list {
+    padding: 100px 0 70px;
+  }
   #main-comment-list .inner-container .title-wrap h1 {
     font-size: 25px;
   }
@@ -1173,16 +1173,26 @@ body {
 }
 @media screen and (max-width: 599px) {
   #main-location {
-    padding: 45px 0 90px;
+    padding: 70px 0 100px;
   }
   #main-location .inner-container .title-wrap h1 {
     font-size: 25px;
+  }
+  #main-location .inner-container .title-wrap .btn-more {
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 35px;
+    margin-top: 20px;
   }
   #main-location .inner-container .company-wrap {
     display: block;
   }
   #main-location .inner-container .company-wrap article:not(:first-child) {
     margin-top: 50px;
+  }
+  #main-location .inner-container .company-wrap article .info-box h2 {
+    font-size: 16px;
   }
 }
 .members .sub-visual figure {

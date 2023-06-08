@@ -114,12 +114,20 @@
 
 @media screen and (max-width: $mobile) {
 	#main-location {
-		padding: 45px 0 90px;
+		padding: 70px 0 100px;
 
 		.inner-container {
 			.title-wrap {
 				h1 {
 					font-size: 25px;
+				}
+
+				.btn-more {
+					width: 120px;
+					height: 35px;
+					font-size: 12px;
+					line-height: 35px;
+					margin-top: 20px;
 				}
 			}
 
@@ -129,6 +137,12 @@
 				article {
 					&:not(:first-child) {
 						margin-top: 50px;
+					}
+
+					.info-box {
+						h2 {
+							font-size: 16px;
+						}
 					}
 				}
 			}

@@ -131,6 +131,8 @@ $slideWidth: 500px;
 
 @media screen and (max-width: $mobile) {
 	#main-comment-list {
+		padding: 100px 0 70px;
+
 		.inner-container {
 			.title-wrap {
 				h1 {
