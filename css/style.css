@@ -1149,6 +1149,42 @@ body {
   margin-top: 17px;
 }
 
+@media screen and (max-width: 1200px) {
+  #main-location .inner-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  #main-location .inner-container .title-wrap {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 999px) {
+  #main-location .inner-container {
+    display: block;
+  }
+  #main-location .inner-container .title-wrap {
+    width: 100%;
+    margin-right: 0;
+  }
+  #main-location .inner-container .company-wrap {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 599px) {
+  #main-location {
+    padding: 45px 0 90px;
+  }
+  #main-location .inner-container .title-wrap h1 {
+    font-size: 25px;
+  }
+  #main-location .inner-container .company-wrap {
+    display: block;
+  }
+  #main-location .inner-container .company-wrap article:not(:first-child) {
+    margin-top: 50px;
+  }
+}
 .members .sub-visual figure {
   width: 100%;
   height: 280px;

@@ -80,3 +80,58 @@
 		}
 	}
 }
+
+@media screen and (max-width: $mainContainer) {
+	#main-location {
+		.inner-container {
+			width: 100%;
+			padding: 0 $responsePadding;
+
+			.title-wrap {
+				margin-right: 50px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	#main-location {
+		.inner-container {
+			display: block;
+
+			.title-wrap {
+				width: 100%;
+				margin-right: 0;
+			}
+
+			.company-wrap {
+				width: 100%;
+				margin-top: 50px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	#main-location {
+		padding: 45px 0 90px;
+
+		.inner-container {
+			.title-wrap {
+				h1 {
+					font-size: 25px;
+				}
+			}
+
+			.company-wrap {
+				display: block;
+
+				article {
+					&:not(:first-child) {
+						margin-top: 50px;
+					}
+				}
+			}
+		}
+	}
+}
