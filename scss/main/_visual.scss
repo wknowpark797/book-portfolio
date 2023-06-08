@@ -126,13 +126,49 @@
 				align-items: flex-start;
 
 				> div {
-					.img-box {
-						box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
+					.ratio-wrap {
+						width: 330px;
+						position: relative;
 
-						img {
-							width: 100%;
-							height: 100%;
-							object-fit: cover;
+						.img-box {
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
+
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+							}
+						}
+					}
+
+					@for $i from 0 through 3 {
+						&:nth-of-type(#{$i + 1}) {
+							position: relative;
+							z-index: 3 - $i;
+
+							.ratio-wrap {
+								margin-top: 15px * $i;
+
+								&::before {
+									content: '';
+									display: block;
+									padding-top: calc(135% - ($i * 30px));
+								}
+							}
+						}
+					}
+
+					&:not(:first-child) {
+						.info-box {
+							display: none;
+						}
+						.ratio-wrap {
+							margin-left: -230px;
 						}
 					}
 
@@ -151,27 +187,6 @@
 							font-weight: 300;
 							color: #777;
 							margin-top: 7px;
-						}
-					}
-
-					&:not(:first-child) {
-						.info-box {
-							display: none;
-						}
-						.img-box {
-							margin-left: -230px;
-						}
-					}
-
-					@for $i from 0 through 3 {
-						&:nth-of-type(#{$i + 1}) {
-							position: relative;
-							z-index: 3 - $i;
-							.img-box {
-								width: 330px;
-								height: 480px - ($i * 30);
-								margin-top: 15px * $i;
-							}
 						}
 					}
 				}
