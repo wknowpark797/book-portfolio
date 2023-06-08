@@ -111,3 +111,45 @@ $slideWidth: 220px;
 		}
 	}
 }
+
+@media screen and (max-width: $mainContainer) {
+	#main-book-list {
+		justify-content: flex-start;
+
+		.inner-container {
+			width: 100%;
+			padding-left: $responsePadding;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#main-book-list {
+		padding: 90px 0;
+
+		.inner-container {
+			display: block;
+
+			.title-wrap {
+				width: 100%;
+				margin-right: 0;
+
+				h1 {
+					font-size: 25px;
+				}
+			}
+
+			.slide-wrap {
+				margin-top: 30px;
+
+				.panel {
+					> div {
+						.ratio-wrap {
+							width: 135px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
