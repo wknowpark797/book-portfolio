@@ -121,7 +121,6 @@
 
 		.slide-wrap {
 			margin-top: 50px;
-			overflow: hidden;
 
 			.panel {
 				display: flex;
@@ -358,32 +357,19 @@
 			.slide-wrap {
 				width: 100%;
 				margin-left: 0;
-				justify-content: flex-start;
 				padding: 15px 0;
 				margin-top: 20px;
 
 				.panel {
 					> div {
 						.ratio-wrap {
-							width: 120px;
+							width: 140px;
 							box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-						}
-
-						@for $i from 0 through 3 {
-							&:nth-of-type(#{$i + 1}) {
-								.ratio-wrap {
-									margin-top: 0;
-
-									&::before {
-										padding-top: 135%;
-									}
-								}
-							}
 						}
 
 						&:not(:first-child) {
 							.ratio-wrap {
-								margin-left: 22px;
+								margin-left: -90px;
 							}
 						}
 
@@ -424,7 +410,7 @@
 				.panel {
 					> div {
 						.ratio-wrap {
-							width: 100px;
+							width: 115px;
 						}
 					}
 				}
