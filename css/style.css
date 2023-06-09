@@ -322,7 +322,7 @@ body {
   font-family: "Noto Serif KR";
   font-size: 52px;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.5;
   color: #333;
   margin-left: auto;
 }
@@ -352,7 +352,7 @@ body {
   width: 370px;
   font-size: 18px;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.7;
   color: #555;
   margin: 30px 0 0 auto;
 }
@@ -441,6 +441,87 @@ body {
   margin-left: 10px;
 }
 
+@media screen and (max-width: 1230px) {
+  #main-visual .slide-wrap .panel > div .detail-wrap h1 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #main-visual .slide-wrap {
+    padding: 30px 20px;
+  }
+  #main-visual .slide-wrap .panel > div .ratio-wrap {
+    padding: 0 0 0 50px;
+  }
+  #main-visual .slide-wrap .panel > div .ratio-wrap .img-box {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 999px) {
+  #main-visual .slide-wrap .panel > div .detail-wrap {
+    padding-right: 30px;
+  }
+  #main-visual .slide-wrap .panel > div .detail-wrap h1 {
+    font-size: 44px;
+  }
+  #main-visual .slide-wrap .panel > div .detail-wrap .content {
+    width: 100%;
+  }
+  #main-visual .slide-wrap .panel > div .ratio-wrap {
+    padding: 0 0 0 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #main-visual .slide-wrap .panel > div .detail-wrap h1 {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #main-visual {
+    padding: 90px 0 70px;
+  }
+  #main-visual .slide-wrap .panel > div {
+    display: block;
+  }
+  #main-visual .slide-wrap .panel > div .detail-wrap {
+    width: 100%;
+    text-align: left;
+    padding-right: 0;
+  }
+  #main-visual .slide-wrap .panel > div .detail-wrap h1 {
+    font-size: 27px;
+  }
+  #main-visual .slide-wrap .panel > div .detail-wrap .rating-wrap {
+    justify-content: flex-start;
+    margin-top: 12px;
+  }
+  #main-visual .slide-wrap .panel > div .detail-wrap .rating-wrap .star-box span i {
+    font-size: 20px;
+  }
+  #main-visual .slide-wrap .panel > div .detail-wrap .rating-wrap > p {
+    display: none;
+  }
+  #main-visual .slide-wrap .panel > div .detail-wrap .content {
+    font-size: 16px;
+    margin-top: 20px;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  #main-visual .slide-wrap .panel > div .detail-wrap .btn-more {
+    width: 130px;
+    height: 38px;
+    font-size: 13px;
+    line-height: 38px;
+  }
+  #main-visual .slide-wrap .panel > div .ratio-wrap {
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+  }
+}
 #main-book-list {
   display: flex;
   justify-content: flex-end;
