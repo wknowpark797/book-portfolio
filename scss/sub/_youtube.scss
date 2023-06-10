@@ -71,7 +71,7 @@
 
 				span {
 					font-size: 16px;
-					font-weight: 500;
+					font-weight: 700;
 				}
 			}
 		}
@@ -167,6 +167,116 @@
 				font-weight: 900;
 				color: #333;
 				margin-bottom: 50px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $subContainer) {
+	.sub-youtube {
+		.top-wrap {
+			.inner-container {
+				width: 100%;
+				padding: 0 $responsePadding;
+			}
+		}
+
+		.bottom-wrap {
+			.inner-container {
+				width: 100%;
+				padding: 0 $responsePadding;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.sub-youtube {
+		.list-wrap {
+			article {
+				width: calc(50% - 15px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.sub-youtube {
+		.pick-wrap {
+			.inner-container {
+				width: 100%;
+				padding: 0 $responsePadding;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.sub-youtube {
+		.list-wrap {
+			article {
+				width: 100%;
+				padding: 20px 25px;
+
+				&::before {
+					width: 7px;
+					height: 40px;
+				}
+
+				h3 {
+					font-size: 20px;
+				}
+
+				.date {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.top-wrap {
+			padding: 120px 0 100px;
+		}
+
+		.pick-wrap {
+			.inner-container {
+				.title-wrap {
+					display: block;
+
+					> p {
+						width: 100%;
+						font-size: 20px;
+						margin-top: 0;
+					}
+
+					.inner-title {
+						width: 100%;
+						margin-top: 15px;
+
+						h2 {
+							font-size: 24px;
+						}
+
+						.date {
+							font-size: 16px;
+							margin-top: 10px;
+						}
+					}
+				}
+
+				.video {
+					height: 230px;
+				}
+			}
+		}
+
+		.bottom-wrap {
+			padding: 50px 0 100px;
+
+			.inner-container {
+				h2 {
+					font-size: 25px;
+					margin-bottom: 35px;
+				}
 			}
 		}
 	}
