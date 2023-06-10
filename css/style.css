@@ -1550,5 +1550,151 @@ body {
     font-size: 38px;
   }
 }
+.sub-youtube .list-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+.sub-youtube .list-wrap article {
+  width: calc(33.3333% - 20px);
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 30px 35px;
+  position: relative;
+}
+.sub-youtube .list-wrap article::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 50px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: #4eb3b3;
+}
+.sub-youtube .list-wrap article h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #333;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.sub-youtube .list-wrap article .date {
+  font-size: 16px;
+  font-weight: 300;
+  color: #777;
+  margin-top: 5px;
+}
+.sub-youtube .list-wrap article .video {
+  width: 100%;
+  height: 170px;
+  background: #eee;
+  margin: 25px 0;
+  cursor: pointer;
+}
+.sub-youtube .list-wrap article .video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sub-youtube .list-wrap article .btn-more {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #069797;
+  cursor: pointer;
+}
+.sub-youtube .list-wrap article .btn-more i {
+  font-size: 22px;
+  margin-right: 10px;
+}
+.sub-youtube .list-wrap article .btn-more span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.sub-youtube .top-wrap {
+  padding: 120px 0;
+}
+.sub-youtube .top-wrap .inner-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.sub-youtube .pick-wrap {
+  padding: 70px 0 100px;
+  position: relative;
+}
+.sub-youtube .pick-wrap::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 67%;
+  background: #ddf4f4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.sub-youtube .pick-wrap .inner-container {
+  width: 850px;
+  margin: 0 auto;
+}
+.sub-youtube .pick-wrap .inner-container .title-wrap {
+  display: flex;
+  align-items: flex-start;
+}
+.sub-youtube .pick-wrap .inner-container .title-wrap > p {
+  width: 20%;
+  font-family: "Noto Serif KR";
+  font-size: 22px;
+  font-weight: 900;
+  color: #4eb3b3;
+  margin-top: 10px;
+}
+.sub-youtube .pick-wrap .inner-container .title-wrap .inner-title {
+  width: 80%;
+}
+.sub-youtube .pick-wrap .inner-container .title-wrap .inner-title h2 {
+  font-family: "Noto Serif KR";
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: #333;
+}
+.sub-youtube .pick-wrap .inner-container .title-wrap .inner-title .date {
+  font-size: 20px;
+  font-weight: 300;
+  color: #333;
+  margin-top: 15px;
+}
+.sub-youtube .pick-wrap .inner-container .video {
+  width: 100%;
+  height: 430px;
+  background: #c3c3c3;
+  margin-top: 50px;
+}
+.sub-youtube .pick-wrap .inner-container .video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sub-youtube .bottom-wrap {
+  padding: 100px 0;
+}
+.sub-youtube .bottom-wrap .inner-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.sub-youtube .bottom-wrap .inner-container h2 {
+  font-family: "Noto Serif KR";
+  font-size: 34px;
+  font-weight: 900;
+  color: #333;
+  margin-bottom: 50px;
+}
 
 /*# sourceMappingURL=style.css.map */
