@@ -1,34 +1,4 @@
 .members {
-	.sub-visual {
-		figure {
-			width: 100%;
-			height: 280px;
-			background: #f7f7f7;
-			margin-bottom: -132px;
-		}
-
-		.title-wrap {
-			width: $subContainer;
-			margin: 0 auto;
-
-			.bread-crumb {
-				font-size: 16px;
-				font-weight: 700;
-				color: #333;
-				letter-spacing: 5px;
-				margin-bottom: 10px;
-			}
-
-			h1 {
-				font-family: 'Noto Serif KR';
-				font-size: 52px;
-				font-weight: 900;
-				line-height: 1.3;
-				color: #2ba9a9;
-			}
-		}
-	}
-
 	.intro-wrap {
 		margin: 120px 0;
 		display: flex;
@@ -325,13 +295,6 @@
 
 @media screen and (max-width: $subContainer) {
 	.members {
-		.sub-visual {
-			.title-wrap {
-				width: 100%;
-				padding: 0 $responsePadding;
-			}
-		}
-
 		.intro-person {
 			.inner-person {
 				.inner-container {
@@ -535,23 +498,6 @@
 
 @media screen and (max-width: $mobile) {
 	.members {
-		.sub-visual {
-			figure {
-				height: 240px;
-				margin-bottom: -110px;
-			}
-
-			.title-wrap {
-				.bread-crumb {
-					font-size: 14px;
-				}
-
-				h1 {
-					font-size: 40px;
-				}
-			}
-		}
-
 		.intro-wrap {
 			margin: 0 0 100px;
 

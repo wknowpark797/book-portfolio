@@ -23,6 +23,7 @@ $responsePadding: 20px;
 @import 'common/header';
 @import 'common/footer';
 @import 'common/fonts';
+@import 'common/layout';
 
 // main
 @import 'main/visual';
@@ -34,3 +35,4 @@ $responsePadding: 20px;
 
 // sub
 @import 'sub/members';
+@import 'sub/youtube';

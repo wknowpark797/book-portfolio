@@ -262,6 +262,49 @@ body {
   font-weight: 900;
   src: url("../fonts/noto-serif-kr-v20-korean_latin-900.woff2") format("woff2");
 }
+.sub-content .sub-visual figure {
+  width: 100%;
+  height: 280px;
+  background: #f7f7f7;
+  margin-bottom: -132px;
+}
+.sub-content .sub-visual .title-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.sub-content .sub-visual .title-wrap .bread-crumb {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+.sub-content .sub-visual .title-wrap h1 {
+  font-family: "Noto Serif KR";
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.3;
+  color: #2ba9a9;
+}
+
+@media screen and (max-width: 1200px) {
+  .sub-content .sub-visual .title-wrap {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .sub-content .sub-visual figure {
+    height: 240px;
+    margin-bottom: -110px;
+  }
+  .sub-content .sub-visual .title-wrap .bread-crumb {
+    font-size: 14px;
+  }
+  .sub-content .sub-visual .title-wrap h1 {
+    font-size: 40px;
+  }
+}
 #main-visual {
   width: 100%;
   background: #ceefef;
@@ -1090,30 +1133,6 @@ body {
     font-size: 16px;
   }
 }
-.members .sub-visual figure {
-  width: 100%;
-  height: 280px;
-  background: #f7f7f7;
-  margin-bottom: -132px;
-}
-.members .sub-visual .title-wrap {
-  width: 1200px;
-  margin: 0 auto;
-}
-.members .sub-visual .title-wrap .bread-crumb {
-  font-size: 16px;
-  font-weight: 700;
-  color: #333;
-  letter-spacing: 5px;
-  margin-bottom: 10px;
-}
-.members .sub-visual .title-wrap h1 {
-  font-family: "Noto Serif KR";
-  font-size: 52px;
-  font-weight: 900;
-  line-height: 1.3;
-  color: #2ba9a9;
-}
 .members .intro-wrap {
   margin: 120px 0;
   display: flex;
@@ -1349,10 +1368,6 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  .members .sub-visual .title-wrap {
-    width: 100%;
-    padding: 0 20px;
-  }
   .members .intro-person .inner-person .inner-container {
     width: 100%;
     padding: 0 20px;
@@ -1469,16 +1484,6 @@ body {
   }
 }
 @media screen and (max-width: 599px) {
-  .members .sub-visual figure {
-    height: 240px;
-    margin-bottom: -110px;
-  }
-  .members .sub-visual .title-wrap .bread-crumb {
-    font-size: 14px;
-  }
-  .members .sub-visual .title-wrap h1 {
-    font-size: 40px;
-  }
   .members .intro-wrap {
     margin: 0 0 100px;
   }
