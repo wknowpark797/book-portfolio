@@ -1553,7 +1553,7 @@ body {
 .sub-youtube .list-wrap {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
 }
 .sub-youtube .list-wrap article {
@@ -1905,7 +1905,7 @@ body {
   background: #f7f7f7;
   border-radius: 10px;
   padding: 15px 20px;
-  margin-top: -25%;
+  margin-top: -70px;
 }
 .sub-gallery .pictures-wrap .inner-container ul li .info-wrap p {
   font-size: 14px;
