@@ -15,8 +15,8 @@
 			&::before {
 				content: '';
 				display: block;
-				width: 10px;
-				height: 50px;
+				width: 5px;
+				height: 35px;
 				position: absolute;
 				top: 30px;
 				left: 0;
@@ -24,9 +24,9 @@
 			}
 
 			h3 {
-				font-size: 21px;
+				font-size: 17px;
 				font-weight: 700;
-				line-height: 1.5;
+				line-height: 1.4;
 				color: #333;
 
 				white-space: normal;
@@ -37,20 +37,31 @@
 			}
 
 			.date {
-				font-size: 16px;
+				font-size: 15px;
 				font-weight: 300;
 				color: #777;
-				margin-top: 5px;
+				margin-top: 10px;
 			}
 
 			.video {
 				width: 100%;
-				height: 170px;
+				position: relative;
 				background: #eee;
 				margin: 25px 0;
 				cursor: pointer;
 
+				&::before {
+					content: '';
+					display: block;
+					padding-top: 55%;
+				}
+
 				img {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
@@ -65,12 +76,12 @@
 				cursor: pointer;
 
 				i {
-					font-size: 22px;
+					font-size: 20px;
 					margin-right: 10px;
 				}
 
 				span {
-					font-size: 16px;
+					font-size: 15px;
 					font-weight: 700;
 				}
 			}
@@ -218,17 +229,22 @@
 				width: 100%;
 				padding: 20px 25px;
 
-				&::before {
-					width: 7px;
-					height: 40px;
-				}
-
 				h3 {
-					font-size: 20px;
+					font-size: 16px;
 				}
 
 				.date {
 					font-size: 14px;
+				}
+
+				.btn-more {
+					i {
+						font-size: 18px;
+					}
+
+					span {
+						font-size: 14px;
+					}
 				}
 			}
 		}

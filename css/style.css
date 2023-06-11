@@ -1566,17 +1566,17 @@ body {
 .sub-youtube .list-wrap article::before {
   content: "";
   display: block;
-  width: 10px;
-  height: 50px;
+  width: 5px;
+  height: 35px;
   position: absolute;
   top: 30px;
   left: 0;
   background: #4eb3b3;
 }
 .sub-youtube .list-wrap article h3 {
-  font-size: 21px;
+  font-size: 17px;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #333;
   white-space: normal;
   display: -webkit-box;
@@ -1585,19 +1585,29 @@ body {
   overflow: hidden;
 }
 .sub-youtube .list-wrap article .date {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   color: #777;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .sub-youtube .list-wrap article .video {
   width: 100%;
-  height: 170px;
+  position: relative;
   background: #eee;
   margin: 25px 0;
   cursor: pointer;
 }
+.sub-youtube .list-wrap article .video::before {
+  content: "";
+  display: block;
+  padding-top: 55%;
+}
 .sub-youtube .list-wrap article .video img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1610,11 +1620,11 @@ body {
   cursor: pointer;
 }
 .sub-youtube .list-wrap article .btn-more i {
-  font-size: 22px;
+  font-size: 20px;
   margin-right: 10px;
 }
 .sub-youtube .list-wrap article .btn-more span {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 }
 .sub-youtube .top-wrap {
@@ -1723,14 +1733,16 @@ body {
     width: 100%;
     padding: 20px 25px;
   }
-  .sub-youtube .list-wrap article::before {
-    width: 7px;
-    height: 40px;
-  }
   .sub-youtube .list-wrap article h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
   .sub-youtube .list-wrap article .date {
+    font-size: 14px;
+  }
+  .sub-youtube .list-wrap article .btn-more i {
+    font-size: 18px;
+  }
+  .sub-youtube .list-wrap article .btn-more span {
     font-size: 14px;
   }
   .sub-youtube .top-wrap {
