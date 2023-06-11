@@ -9,64 +9,41 @@
 </head>
 
 <body>
-
-  <div class="wrap"></div>
-
   <script>
-    const wrap = document.querySelector('.wrap');
 
-    const keyword = 'computer';
-    const maxResults = 40;  // 최대 40
-    const orderBy = 'newest'; // newest, relevance
-    const printType = 'books';  // all, books, magazines
+    const userId = '105834502729522452212';
+    const shelf = '1001'; // 내 라이브러리 > interest 서가
 
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${keyword}&maxResults=${maxResults}&orderBy=${orderBy}&printType=${printType}`;
+    // 1. [ Bookshelf: list ] 내 라이브러리의 서가 목록
+    const test1 = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves`;
+    fetchData('[Bookshelf: list]', test1);
 
-    let tags = '';
+    // 2. [ Volume: list ] 검색어에 해당하는 도서 목록
+    const test2 = `https://www.googleapis.com/books/v1/volumes?q=vue.js`;
+    fetchData('[Volume: list]', test2);
 
-    fetch(url)
-      .then(res => {
-        return res.json();
-      }).then(data => {
-        console.log(data.items);
+    // 3. [ Bookshelves.volumes: list ] 특정 서가에 해당하는 도서 목록
+    const test3 = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes`;
+    fetchData('[Bookshelves.volumes: list]', test3);
 
-        data.items.forEach(item => {
+    // 4. [ Mylibrary.bookshelves: list ] ? (옵션 파라미터 필요)
+    const test4 = `https://www.googleapis.com/books/v1/mylibrary/bookshelves`;
+    fetchData('[Mylibrary.bookshelves: list]', test4);
 
-          if (!item.volumeInfo.imageLinks) {
-            return;
-          }
+    // 5. [ Mylibrary.bookshelves.volumes: list ] ?
+    const test5 = `https://www.googleapis.com/books/v1/mylibrary/bookshelves/${shelf}/volumes`;
+    fetchData('[Mylibrary.bookshelves.volumes: list]', test5);
 
-          const title = item.volumeInfo.title;
-          const subtitle = item.volumeInfo.subtitle;
-          const authors = item.volumeInfo.authors;
-          const description = item.volumeInfo.description;
-          const categories = item.volumeInfo.categories;
-          const publisher = item.volumeInfo.publisher;
-          const publishedDate = item.volumeInfo.publishedDate;
-          const pageCount = item.volumeInfo.pageCount;
+    async function fetchData(type, url) {
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        console.log(type, data.items);
+      } catch (err) {
+        console.log('error: ', err);
+      }
+    }
 
-          const smallThumbnail = item.volumeInfo.imageLinks.smallThumbnail;
-          const thumbnail = item.volumeInfo.imageLinks.thumbnail.replace('zoom=1', 'zoom=10');
-
-          tags += `
-            <article>
-              <h2>title: ${title}</h2>
-              <p>subtitle: ${subtitle}</p>
-              <p>authors: ${authors}</p>
-              <p>description: ${description}</p>
-              <p>categories: ${categories}</p>
-              <p>publisher: ${publisher}</p>
-              <p>publishedDate: ${publishedDate}</p>
-              <p>pageCount: ${pageCount}</p>
-
-              <div>smallThumbnail: <img src="${smallThumbnail}" /></div>
-              <div>thumbnail: <img src="${thumbnail}" /></div>
-            </article>
-          `;
-        })
-
-        wrap.innerHTML = tags;
-      });
   </script>
 </body>
 
