@@ -47,7 +47,7 @@
 				width: 100%;
 				position: relative;
 				background: #eee;
-				margin: 25px 0;
+				margin-top: 25px;
 				cursor: pointer;
 
 				&::before {
@@ -73,6 +73,7 @@
 				display: flex;
 				align-items: center;
 				color: #069797;
+				padding-top: 25px;
 				cursor: pointer;
 
 				i {
@@ -155,6 +156,7 @@
 				height: 430px;
 				background: #c3c3c3;
 				margin-top: 50px;
+				cursor: pointer;
 
 				img {
 					width: 100%;
@@ -177,7 +179,7 @@
 				font-size: 34px;
 				font-weight: 900;
 				color: #333;
-				margin-bottom: 50px;
+				margin-bottom: 40px;
 			}
 		}
 	}

@@ -53,14 +53,16 @@ function createBasicTags(wrap, items) {
 		tags += `
       <article>
         <h3>${item.snippet.title}</h3>
-        <p class="date">${item.snippet.publishedAt}</p>
+        <p class="date">${item.snippet.publishedAt.split('T')[0].split('-').join('.')}</p>
 
         <div class="video thumb" 
 						data-videoid="${item.snippet.resourceId.videoId}">
           <img src="${item.snippet.thumbnails.standard.url}" alt="">
         </div>
 
-        <button type="button" class="btn-more thumb">
+        <button type="button" 
+							class="btn-more thumb"
+							data-videoid="${item.snippet.resourceId.videoId}">
           <i class="fa-regular fa-circle-play"></i>
           <span>VIEW VIDEO</span>
         </button>
@@ -82,7 +84,7 @@ function createBestTags(wrap, items) {
 
         <div class="inner-title">
           <h2>${item.snippet.title}</h2>
-          <p class="date">${item.snippet.publishedAt}</p>
+          <p class="date">${item.snippet.publishedAt.split('T')[0].split('-').join('.')}</p>
         </div>
       </div>
 
@@ -129,7 +131,7 @@ function removePop() {
 
 	setTimeout(() => {
 		document.querySelector('.pop-wrap').remove();
-	}, 1000);
+	}, 200);
 
 	document.body.style.overflow = 'auto';
 }
