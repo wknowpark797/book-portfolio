@@ -9,7 +9,7 @@ musicListFetch();
 bestListFetch();
 bookListFecth();
 
-// Music Playlist 생성 함수
+// Music Playlist Fetching 함수
 async function musicListFetch() {
 	const playlistId = 'PLEJLcTMBRARd4AKwM7CM_0gf2mKviNR3J';
 	const maxResults = 6;
@@ -21,7 +21,7 @@ async function musicListFetch() {
 	createBasicTags(musicListWrap, data.items);
 }
 
-// Best Playlist 생성 함수
+// Best Playlist Fetching 함수
 async function bestListFetch() {
 	const playlistId = 'PLEJLcTMBRARf9Oh5Ba53RTD69_uhRbXqS';
 	const maxResults = 1;
@@ -33,7 +33,7 @@ async function bestListFetch() {
 	createBestTags(bestListWarp, data.items);
 }
 
-// Book Playlist 생성 함수
+// Book Playlist Fetching 함수
 async function bookListFecth() {
 	const playlistId = 'PLEJLcTMBRAReQQjFb4VKHfgOsgE1Yj8d-';
 	const maxResults = 3;
@@ -45,7 +45,7 @@ async function bookListFecth() {
 	createBasicTags(bookListWrap, data.items);
 }
 
-// 기본 리스트 생성 함수
+// 기본 목록 생성 함수
 function createBasicTags(wrap, items) {
 	let tags = '';
 
@@ -55,12 +55,12 @@ function createBasicTags(wrap, items) {
         <h3>${item.snippet.title}</h3>
         <p class="date">${item.snippet.publishedAt}</p>
 
-        <div class="video">
-          <img src="${item.snippet.thumbnails.standard.url}" 
-              alt="${item.snippet.resourceId.videoId}">
+        <div class="video thumb" 
+						data-videoid="${item.snippet.resourceId.videoId}">
+          <img src="${item.snippet.thumbnails.standard.url}" alt="">
         </div>
 
-        <button type="button" class="btn-more">
+        <button type="button" class="btn-more thumb">
           <i class="fa-regular fa-circle-play"></i>
           <span>VIEW VIDEO</span>
         </button>
@@ -71,7 +71,7 @@ function createBasicTags(wrap, items) {
 	wrap.innerHTML = tags;
 }
 
-// Best 리스트 생성 함수
+// Best 목록 생성 함수
 function createBestTags(wrap, items) {
 	let tags = '';
 
@@ -86,12 +86,50 @@ function createBestTags(wrap, items) {
         </div>
       </div>
 
-      <div class="video">
-        <img src="${item.snippet.thumbnails.maxres.url}" 
-            alt="${item.snippet.resourceId.videoId}">
+      <div class="video thumb" 
+					data-videoid="${item.snippet.resourceId.videoId}">
+        <img src="${item.snippet.thumbnails.maxres.url}" alt="">
       </div>
     `;
 	});
 
 	wrap.innerHTML = tags;
+}
+
+// 이벤트 위임
+document.body.addEventListener('click', (e) => {
+	if (e.target.closest('.thumb')) createPop(e.target.closest('.thumb').dataset.videoid);
+	if (e.target.className === 'pop-close') removePop();
+});
+
+// 팝업 생성 함수
+function createPop(id) {
+	const tags = `
+		<div class="inner-pop">
+			<iframe src="https://www.youtube.com/embed/${id}"></iframe>
+		</div>
+		<button type="button" class="pop-close">close</button>
+	`;
+
+	const pop = document.createElement('aside');
+	pop.className = 'pop-wrap';
+	pop.innerHTML = tags;
+	document.body.append(pop);
+
+	setTimeout(() => {
+		document.querySelector('.pop-wrap').classList.add('on');
+	}, 0);
+
+	document.body.style.overflow = 'hidden';
+}
+
+// 팝업 제거 함수
+function removePop() {
+	document.querySelector('.pop-wrap').classList.remove('on');
+
+	setTimeout(() => {
+		document.querySelector('.pop-wrap').remove();
+	}, 1000);
+
+	document.body.style.overflow = 'auto';
 }
