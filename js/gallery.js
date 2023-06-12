@@ -78,3 +78,41 @@ function isoLayout() {
 	wrap.classList.add('on');
 	loading.classList.add('off');
 }
+
+// 이벤트 위임
+document.body.addEventListener('click', (e) => {
+	if (e.target.className === 'picture') createPop(e.target.getAttribute('alt'));
+	if (e.target.className === 'pop-close') removePop();
+});
+
+// 팝업 생성 함수
+function createPop(img) {
+	const tags = `
+		<div class="inner-pop">
+			<img src="${img}" >
+		</div>
+		<button type="button" class="pop-close">close</button>
+	`;
+
+	const pop = document.createElement('aside');
+	pop.className = 'pop-wrap';
+	pop.innerHTML = tags;
+	document.body.append(pop);
+
+	setTimeout(() => {
+		document.querySelector('.pop-wrap').classList.add('on');
+	}, 0);
+
+	document.body.style.overflow = 'hidden';
+}
+
+// 팝업 제거 함수
+function removePop() {
+	document.querySelector('.pop-wrap').classList.remove('on');
+
+	setTimeout(() => {
+		document.querySelector('.pop-wrap').remove();
+	}, 200);
+
+	document.body.style.overflow = 'auto';
+}
