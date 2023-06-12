@@ -1828,63 +1828,8 @@ body {
   width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-}
-.sub-gallery .search-wrap .inner-container .category-wrap {
-  position: relative;
-}
-.sub-gallery .search-wrap .inner-container .category-wrap.on .option-box {
-  display: block;
-}
-.sub-gallery .search-wrap .inner-container .category-wrap .selected-box {
-  width: 250px;
-  height: 42px;
-  display: flex;
-  border: 1px solid #4eb3b3;
-}
-.sub-gallery .search-wrap .inner-container .category-wrap .selected-box > p {
-  flex: 1;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  color: #333;
-  padding: 0 15px;
-  cursor: pointer;
-}
-.sub-gallery .search-wrap .inner-container .category-wrap .selected-box .btn-select {
-  width: 50px;
-  height: 100%;
-  background: #4eb3b3;
-  color: #fff;
-  cursor: pointer;
-}
-.sub-gallery .search-wrap .inner-container .category-wrap .selected-box .btn-select i {
-  font-size: 16px;
-}
-.sub-gallery .search-wrap .inner-container .category-wrap .option-box {
-  display: none;
-  width: 250px;
-  border: 1px solid #4eb3b3;
-  position: absolute;
-  top: 52px;
-  left: 0;
-}
-.sub-gallery .search-wrap .inner-container .category-wrap .option-box li {
-  font-size: 13px;
-  color: #333;
-  background: #ddf4f4;
-  padding: 13px 15px;
-  transition: 0.2s;
-  cursor: pointer;
-}
-.sub-gallery .search-wrap .inner-container .category-wrap .option-box li:not(:first-child) {
-  border-top: 1px solid #4eb3b3;
-}
-.sub-gallery .search-wrap .inner-container .category-wrap .option-box li:hover {
-  background: #4eb3b3;
-  color: #fff;
 }
 .sub-gallery .search-wrap .inner-container .search-box {
   width: 280px;
@@ -1911,6 +1856,20 @@ body {
   width: 50px;
   height: 100%;
   background: #4eb3b3;
+  color: #fff;
+  cursor: pointer;
+}
+.sub-gallery .search-wrap .inner-container .btn-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+.sub-gallery .search-wrap .inner-container .btn-option button {
+  width: 120px;
+  height: 42px;
+  background: #4eb3b3;
+  font-size: 14px;
   color: #fff;
   cursor: pointer;
 }
@@ -2018,12 +1977,15 @@ body {
   .sub-gallery .search-wrap .inner-container {
     display: block;
   }
-  .sub-gallery .search-wrap .inner-container .category-wrap .selected-box {
-    width: 100%;
-  }
   .sub-gallery .search-wrap .inner-container .search-box {
     width: 100%;
-    margin-top: 13px;
+  }
+  .sub-gallery .search-wrap .inner-container .btn-option {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .sub-gallery .search-wrap .inner-container .btn-option button {
+    width: 50%;
   }
   .sub-gallery .pictures-wrap {
     padding: 50px 0 120px;

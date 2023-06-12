@@ -6,75 +6,8 @@
 			width: $subContainer;
 			margin: 0 auto;
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-end;
 			align-items: center;
-
-			.category-wrap {
-				position: relative;
-
-				&.on {
-					.option-box {
-						display: block;
-					}
-				}
-
-				.selected-box {
-					width: 250px;
-					height: 42px;
-					display: flex;
-					border: 1px solid #4eb3b3;
-
-					> p {
-						flex: 1;
-						height: 100%;
-						display: flex;
-						align-items: center;
-						font-size: 14px;
-						color: #333;
-						padding: 0 15px;
-						cursor: pointer;
-					}
-
-					.btn-select {
-						width: 50px;
-						height: 100%;
-						background: #4eb3b3;
-						color: #fff;
-						cursor: pointer;
-
-						i {
-							font-size: 16px;
-						}
-					}
-				}
-
-				.option-box {
-					display: none;
-					width: 250px;
-					border: 1px solid #4eb3b3;
-					position: absolute;
-					top: 52px;
-					left: 0;
-
-					li {
-						font-size: 13px;
-						color: #333;
-						background: #ddf4f4;
-						padding: 13px 15px;
-						transition: 0.2s;
-						cursor: pointer;
-
-						&:not(:first-child) {
-							border-top: 1px solid #4eb3b3;
-						}
-
-						&:hover {
-							background: #4eb3b3;
-							color: #fff;
-						}
-					}
-				}
-			}
 
 			.search-box {
 				width: 280px;
@@ -103,6 +36,22 @@
 					width: 50px;
 					height: 100%;
 					background: #4eb3b3;
+					color: #fff;
+					cursor: pointer;
+				}
+			}
+
+			.btn-option {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				margin-left: 20px;
+
+				button {
+					width: 120px;
+					height: 42px;
+					background: #4eb3b3;
+					font-size: 14px;
 					color: #fff;
 					cursor: pointer;
 				}
@@ -255,15 +204,17 @@
 			.inner-container {
 				display: block;
 
-				.category-wrap {
-					.selected-box {
-						width: 100%;
-					}
-				}
-
 				.search-box {
 					width: 100%;
-					margin-top: 13px;
+				}
+
+				.btn-option {
+					margin-left: 0;
+					margin-top: 15px;
+
+					button {
+						width: 50%;
+					}
 				}
 			}
 		}
