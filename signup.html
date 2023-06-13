@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOOKS. Sign Up</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/57de64ccd3.js" crossorigin="anonymous"></script>
+  <script defer src="js/form.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="inner-header">
+
+      <h1>
+        <a href="index.html">BOOKS.</a>
+      </h1>
+
+      <ul class="gnb">
+        <li><a href="members.html">MEMBERS</a></li>
+        <li><a href="gallery.html">GALLRY</a></li>
+        <li><a href="youtube.html">YOUTUBE</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+        <li><a href="#">LOCATION</a></li>
+      </ul>
+
+      <div class="login-wrap">
+        <a href="#">SIGN IN</a>
+        <a href="signup.html">SIGN UP</a>
+      </div>
+
+      <!-- 모바일 메뉴 버튼 -->
+      <button type="button" class="btn-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Content -->
+  <section class="sign-up">
+    <div class="inner-container">
+      <div class="signup-box">
+
+        <div class="top-wrap">
+          <h1>Create Account</h1>
+
+          <div class="sns-wrap">
+            <a href="#">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-google-plus-g"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+
+          <p>or use your email for registration:</p>
+        </div>
+
+        <form action="" method="get" id="formSignup" class="form-signup">
+          <fieldset>
+            <legend class="h">회원가입 form 입력 항목</legend>
+
+            <!-- user id -->
+            <div class="input-box">
+              <label for="userid" class="tit">User ID</label>
+              <input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요.">
+            </div>
+
+            <!-- password -->
+            <div class="input-box">
+              <label for="pwd1" class="tit">Password</label>
+              <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요.">
+            </div>
+
+            <div class="input-box">
+              <label for="pwd2" class="tit">Re Passsword</label>
+              <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재 입력하세요.">
+            </div>
+
+            <!-- Email -->
+            <div class="input-box">
+              <label for="email" class="tit">E-mail</label>
+              <input type="email" name="email" id="email" placeholder="이메일 주소를 입력하세요.">
+            </div>
+
+            <!-- Education -->
+            <div class="input-box">
+              <label for="edu" class="tit">Education</label>
+
+              <select name="edu" id="edu">
+                <option value="">최종학력을 선택해주세요.</option>
+                <option value="elementary school">초등학교 졸업</option>
+                <option value="middle school">중학교 졸업</option>
+                <option value="high school">고등학교 졸업</option>
+                <option value="college">대학교 졸업</option>
+              </select>
+            </div>
+
+            <!-- Gender -->
+            <div class="input-box">
+              <p class="tit">Gender</p>
+
+              <div class="radio-wrap">
+                <div>
+                  <input type="radio" name="gender" id="male" value="male">
+                  <label for="male">Male</label>
+                </div>
+
+                <div>
+                  <input type="radio" name="gender" id="female" value="female">
+                  <label for="female">Female</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interests -->
+            <div class="input-box">
+              <p class="tit">Interests</p>
+
+              <div class="check-wrap">
+                <div>
+                  <input type="checkbox" name="hobby" id="sports" value="sports">
+                  <label for="sports">Sports</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" name="hobby" id="music" value="music">
+                  <label for="music">Music</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" name="hobby" id="game" value="game">
+                  <label for="game">Game</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" name="hobby" id="reading" value="reading">
+                  <label for="reading">Reading</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comments -->
+            <div class="input-box">
+              <label for="comments" class="tit">Comments</label>
+              <textarea name="comments" id="comments" cols="30" rows="7" placeholder="남기는 글을 입력하세요."></textarea>
+            </div>
+
+            <div class="btn-wrap">
+              <input type="reset" value="RESET">
+              <input type="submit" value="SIGN UP">
+            </div>
+
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner-footer">
+
+      <div class="top">
+        <h1>
+          <a href="index.html">BOOKS.</a>
+        </h1>
+
+        <div class="sns-wrap">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <ul class="gnb">
+          <li><a href="members.html">MEMBERS</a></li>
+          <li><a href="gallery.html">GALLRY</a></li>
+          <li><a href="youtube.html">YOUTUBE</a></li>
+          <li><a href="#">COMMUNITY</a></li>
+          <li><a href="#">LOCATION</a></li>
+        </ul>
+
+        <p>&copy; 2023 All rights reserved. <span>Lorem Ipsum Books.</span></p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

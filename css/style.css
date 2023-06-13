@@ -24,6 +24,21 @@ body {
   font-weight: 400;
 }
 
+fieldset {
+  border: none;
+}
+
+input,
+label {
+  vertical-align: middle;
+}
+
+.h {
+  position: absolute;
+  top: -99999px;
+  opacity: 0;
+}
+
 #header.header-main {
   width: 100%;
   position: absolute;
@@ -1996,6 +2011,146 @@ body {
   .sub-gallery .pictures-wrap .inner-container ul li > div {
     padding: 10px 0;
   }
+}
+.sign-up {
+  padding: 120px 0;
+}
+.sign-up .inner-container {
+  width: 700px;
+  margin: 0 auto;
+}
+.sign-up .inner-container .signup-box {
+  background: #f7f7f7;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 75px 50px;
+}
+.sign-up .inner-container .signup-box .top-wrap {
+  text-align: center;
+}
+.sign-up .inner-container .signup-box .top-wrap h1 {
+  font-family: "Noto Serif KR";
+  font-size: 40px;
+  font-weight: 900;
+  color: #069797;
+}
+.sign-up .inner-container .signup-box .top-wrap .sns-wrap {
+  display: inline-flex;
+  gap: 15px;
+  margin: 30px 0;
+}
+.sign-up .inner-container .signup-box .top-wrap .sns-wrap a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 50%;
+}
+.sign-up .inner-container .signup-box .top-wrap .sns-wrap a i {
+  font-size: 18px;
+  color: #333;
+}
+.sign-up .inner-container .signup-box .top-wrap > p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #069797;
+}
+.sign-up .inner-container .signup-box .form-signup {
+  margin-top: 35px;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box:not(:first-child) {
+  margin-top: 25px;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box .tit {
+  display: block;
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 7px;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box input[type=text],
+.sign-up .inner-container .signup-box .form-signup .input-box input[type=password],
+.sign-up .inner-container .signup-box .form-signup .input-box input[type=email],
+.sign-up .inner-container .signup-box .form-signup .input-box select,
+.sign-up .inner-container .signup-box .form-signup .input-box textarea {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  padding: 0 15px;
+  border: 1px solid #e7e7e7;
+  outline: none;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  color: #333;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box input[type=text]::placeholder,
+.sign-up .inner-container .signup-box .form-signup .input-box input[type=password]::placeholder,
+.sign-up .inner-container .signup-box .form-signup .input-box input[type=email]::placeholder,
+.sign-up .inner-container .signup-box .form-signup .input-box select::placeholder,
+.sign-up .inner-container .signup-box .form-signup .input-box textarea::placeholder {
+  font-size: 13px;
+  color: #bfbfbf;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box textarea {
+  height: auto;
+  padding: 15px;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box .radio-wrap,
+.sign-up .inner-container .signup-box .form-signup .input-box .check-wrap {
+  display: flex;
+  align-items: center;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box .radio-wrap > div:not(:first-child),
+.sign-up .inner-container .signup-box .form-signup .input-box .check-wrap > div:not(:first-child) {
+  margin-left: 20px;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box .radio-wrap > div input,
+.sign-up .inner-container .signup-box .form-signup .input-box .check-wrap > div input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #888;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box .radio-wrap > div input:checked,
+.sign-up .inner-container .signup-box .form-signup .input-box .check-wrap > div input:checked {
+  border: 5px solid #4eb3b3;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box .radio-wrap > div label,
+.sign-up .inner-container .signup-box .form-signup .input-box .check-wrap > div label {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+.sign-up .inner-container .signup-box .form-signup .input-box .check-wrap > div input {
+  border-radius: 0;
+}
+.sign-up .inner-container .signup-box .form-signup .btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+.sign-up .inner-container .signup-box .form-signup .btn-wrap input {
+  width: 150px;
+  height: 45px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 45px;
+  color: #fff;
+  border: none;
+  background: #4eb3b3;
+  cursor: pointer;
+}
+.sign-up .inner-container .signup-box .form-signup .btn-wrap input:not(:first-child) {
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

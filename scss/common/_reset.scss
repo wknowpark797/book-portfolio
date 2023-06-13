@@ -23,3 +23,19 @@ body {
 	font-family: 'Noto Sans KR';
 	font-weight: 400;
 }
+
+// Form
+fieldset {
+	border: none;
+}
+
+input,
+label {
+	vertical-align: middle;
+}
+
+.h {
+	position: absolute;
+	top: -99999px;
+	opacity: 0;
+}
