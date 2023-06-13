@@ -17,6 +17,7 @@
 					font-family: 'Noto Serif KR';
 					font-size: 40px;
 					font-weight: 900;
+					line-height: 1.2;
 					color: #069797;
 				}
 
@@ -93,6 +94,7 @@
 					.radio-wrap,
 					.check-wrap {
 						display: flex;
+						flex-wrap: wrap;
 						align-items: center;
 
 						> div {
@@ -138,6 +140,7 @@
 
 				.btn-wrap {
 					display: flex;
+					flex-wrap: wrap;
 					justify-content: center;
 					align-items: center;
 					margin-top: 70px;
@@ -155,6 +158,55 @@
 
 						&:not(:first-child) {
 							margin-left: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.sign-up {
+		.inner-container {
+			width: 100%;
+			padding: 0 $responsePadding;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.sign-up {
+		.inner-container {
+			.signup-box {
+				padding: 75px 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.sign-up {
+		.inner-container {
+			.signup-box {
+				.form-signup {
+					.input-box {
+						.radio-wrap,
+						.check-wrap {
+							display: block;
+
+							> div {
+								&:not(:first-child) {
+									margin-left: 0;
+									margin-top: 10px;
+								}
+							}
+						}
+					}
+
+					.btn-wrap {
+						input {
+							flex: 1;
 						}
 					}
 				}
