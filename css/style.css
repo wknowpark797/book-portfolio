@@ -2168,6 +2168,9 @@ label {
   }
 }
 @media screen and (max-width: 450px) {
+  .sign-up .inner-container .signup-box .top-wrap h1 {
+    font-size: 32px;
+  }
   .sign-up .inner-container .signup-box .form-signup .input-box .radio-wrap,
   .sign-up .inner-container .signup-box .form-signup .input-box .check-wrap {
     display: block;
