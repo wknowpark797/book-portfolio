@@ -2026,14 +2026,103 @@ label {
   }
 }
 .sign-up {
+  background: #f7f7f7;
   padding: 120px 0;
 }
 .sign-up .inner-container {
-  width: 700px;
+  width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.sign-up .inner-container .desc-wrap {
+  width: 480px;
+  padding-top: 35px;
+  margin-right: 70px;
+}
+.sign-up .inner-container .desc-wrap .title-wrap h2 {
+  font-family: "Noto Serif KR";
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: #333;
+}
+.sign-up .inner-container .desc-wrap .title-wrap p {
+  margin-top: 33px;
+  position: relative;
+}
+.sign-up .inner-container .desc-wrap .title-wrap p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #c3c3c3;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.sign-up .inner-container .desc-wrap .title-wrap p span {
+  font-size: 15px;
+  font-weight: 300;
+  color: #9e9e9e;
+  background: #f7f7f7;
+  padding-right: 15px;
+  position: relative;
+  z-index: 1;
+}
+.sign-up .inner-container .desc-wrap .change-wrap {
+  background: #ddf4f4;
+  padding: 25px;
+  margin: 50px 0;
+}
+.sign-up .inner-container .desc-wrap .change-wrap ul li {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+  padding-left: 15px;
+  position: relative;
+}
+.sign-up .inner-container .desc-wrap .change-wrap ul li::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.sign-up .inner-container .desc-wrap .change-wrap ul li:not(:first-child) {
+  margin-top: 10px;
+}
+.sign-up .inner-container .desc-wrap .list-notice li {
+  display: flex;
+  align-items: center;
+}
+.sign-up .inner-container .desc-wrap .list-notice li:not(:first-child) {
+  margin-top: 35px;
+}
+.sign-up .inner-container .desc-wrap .list-notice li i {
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: #069797;
+  margin-right: 20px;
+}
+.sign-up .inner-container .desc-wrap .list-notice li p {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #777;
 }
 .sign-up .inner-container .signup-box {
-  background: #f7f7f7;
+  width: 550px;
+  background: #fff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   padding: 75px 50px;
 }
@@ -2096,9 +2185,9 @@ label {
 .sign-up .inner-container .signup-box .form-signup .input-box textarea {
   width: 100%;
   height: 50px;
-  background: #fff;
+  background: #f7f7f7;
   padding: 0 15px;
-  border: 1px solid #e7e7e7;
+  border: none;
   outline: none;
   font-family: "Noto Sans KR";
   font-size: 14px;
