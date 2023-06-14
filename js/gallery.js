@@ -48,7 +48,12 @@ function createList(arr) {
           </div>
 
           <div class="info-wrap">
-            <p>${item.owner}</p>
+						<div class="profile-wrap">
+							<img class="profile-img" 
+									src="http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg"
+									alt="${item.owner}">
+							<p class="profile-user">${item.owner}</p>
+						</div>
             <h3>${item.title}</h3>
           </div>
         </div>
@@ -66,6 +71,10 @@ function setImgLoading() {
 	let count = 0;
 
 	for (const img of imgArr) {
+		// 프로필 이미지 에러
+		img.onerror = () => {
+			img.setAttribute('src', 'https://www.flickr.com/images/buddyicon.gif');
+		};
 		img.onload = () => {
 			count++;
 			count === imgArr.length && isoLayout();
@@ -100,6 +109,8 @@ function setURL(type, opt) {
 document.body.addEventListener('click', (e) => {
 	if (e.target.className === 'picture') createPop(e.target.getAttribute('alt'));
 	if (e.target.className === 'pop-close') removePop();
+	if (e.target.className === 'profile-img') fetchData(setURL('user', e.target.getAttribute('alt')));
+	if (e.target.className === 'profile-user') fetchData(setURL('user', e.target.innerText));
 });
 
 // 팝업 생성 함수

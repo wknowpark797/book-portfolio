@@ -22,6 +22,7 @@ button {
 body {
   font-family: "Noto Sans KR";
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 fieldset {
@@ -1948,15 +1949,27 @@ label {
   width: 93%;
   background: #eee;
   border-radius: 10px;
-  padding: 15px 20px;
+  padding: 15px 18px;
   margin-top: -30px;
   position: relative;
 }
-.sub-gallery .pictures-wrap .inner-container ul li .info-wrap p {
+.sub-gallery .pictures-wrap .inner-container ul li .info-wrap .profile-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.sub-gallery .pictures-wrap .inner-container ul li .info-wrap .profile-wrap img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.sub-gallery .pictures-wrap .inner-container ul li .info-wrap .profile-wrap p {
   font-size: 14px;
   font-weight: 300;
   color: #777;
-  margin-bottom: 5px;
+  margin-left: 10px;
 }
 .sub-gallery .pictures-wrap .inner-container ul li .info-wrap h3 {
   font-size: 14px;
