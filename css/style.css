@@ -2210,10 +2210,7 @@ label {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-}
-.sign-up .inner-container .signup-box .form-signup .input-box .radio-wrap > div:not(:first-child),
-.sign-up .inner-container .signup-box .form-signup .input-box .check-wrap > div:not(:first-child) {
-  margin-left: 20px;
+  gap: 20px;
 }
 .sign-up .inner-container .signup-box .form-signup .input-box .radio-wrap > div input,
 .sign-up .inner-container .signup-box .form-signup .input-box .check-wrap > div input {
@@ -2264,18 +2261,59 @@ label {
   margin-left: 10px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1200px) {
   .sign-up .inner-container {
     width: 100%;
     padding: 0 20px;
   }
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1140px) {
+  .sign-up .inner-container .desc-wrap {
+    flex: 1;
+    margin-right: 35px;
+  }
   .sign-up .inner-container .signup-box {
-    padding: 75px 20px;
+    flex: 1;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 850px) {
+  .sign-up .inner-container {
+    display: block;
+  }
+  .sign-up .inner-container .desc-wrap {
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  .sign-up .inner-container .desc-wrap .change-wrap {
+    display: none;
+  }
+  .sign-up .inner-container .desc-wrap .list-notice {
+    margin-top: 50px;
+  }
+  .sign-up .inner-container .signup-box {
+    margin: 70px auto 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .sign-up {
+    padding: 80px 0 100px;
+  }
+  .sign-up .inner-container .desc-wrap {
+    width: 100%;
+  }
+  .sign-up .inner-container .desc-wrap .title-wrap h2 {
+    font-size: 24px;
+  }
+  .sign-up .inner-container .desc-wrap .title-wrap p {
+    margin-top: 30px;
+  }
+  .sign-up .inner-container .desc-wrap .title-wrap p span {
+    font-size: 14px;
+  }
+  .sign-up .inner-container .signup-box {
+    width: 100%;
+    padding: 75px 20px;
+  }
   .sign-up .inner-container .signup-box .top-wrap h1 {
     font-size: 32px;
   }
@@ -2285,7 +2323,6 @@ label {
   }
   .sign-up .inner-container .signup-box .form-signup .input-box .radio-wrap > div:not(:first-child),
   .sign-up .inner-container .signup-box .form-signup .input-box .check-wrap > div:not(:first-child) {
-    margin-left: 0;
     margin-top: 10px;
   }
   .sign-up .inner-container .signup-box .form-signup .btn-wrap input {

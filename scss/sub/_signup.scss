@@ -211,12 +211,9 @@
 						display: flex;
 						flex-wrap: wrap;
 						align-items: center;
+						gap: 20px;
 
 						> div {
-							&:not(:first-child) {
-								margin-left: 20px;
-							}
-
 							input {
 								-webkit-appearance: none;
 								-moz-appearance: none;
@@ -281,7 +278,7 @@
 	}
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: $subContainer) {
 	.sign-up {
 		.inner-container {
 			width: 100%;
@@ -290,20 +287,73 @@
 	}
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: 1140px) {
 	.sign-up {
 		.inner-container {
+			.desc-wrap {
+				flex: 1;
+				margin-right: 35px;
+			}
+
 			.signup-box {
-				padding: 75px 20px;
+				flex: 1;
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 850px) {
 	.sign-up {
 		.inner-container {
+			display: block;
+
+			.desc-wrap {
+				margin: 0 auto;
+				padding-top: 0;
+
+				.change-wrap {
+					display: none;
+				}
+
+				.list-notice {
+					margin-top: 50px;
+				}
+			}
+
 			.signup-box {
+				margin: 70px auto 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.sign-up {
+		padding: 80px 0 100px;
+
+		.inner-container {
+			.desc-wrap {
+				width: 100%;
+
+				.title-wrap {
+					h2 {
+						font-size: 24px;
+					}
+
+					p {
+						margin-top: 30px;
+
+						span {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+
+			.signup-box {
+				width: 100%;
+				padding: 75px 20px;
+
 				.top-wrap {
 					h1 {
 						font-size: 32px;
@@ -318,7 +368,6 @@
 
 							> div {
 								&:not(:first-child) {
-									margin-left: 0;
 									margin-top: 10px;
 								}
 							}
