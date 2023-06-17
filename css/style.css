@@ -471,7 +471,7 @@ label {
 }
 #main-visual .slide-wrap .panel > div .ratio-wrap {
   width: 50%;
-  padding: 0 30px 0 70px;
+  padding: 0 140px 0 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -503,25 +503,31 @@ label {
   opacity: 0.9;
   z-index: 1;
 }
-#main-visual .slide-wrap .panel > div .ratio-wrap .indicator .current-number {
+#main-visual .slide-wrap .indicator {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+#main-visual .slide-wrap .indicator .current-number {
   font-family: "Noto Serif KR";
   font-size: 20px;
   line-height: 1.2;
   color: #333;
   text-align: right;
 }
-#main-visual .slide-wrap .panel > div .ratio-wrap .indicator .current-number span {
+#main-visual .slide-wrap .indicator .current-number span {
   display: block;
   font-size: 50px;
   font-weight: 900;
 }
-#main-visual .slide-wrap .panel > div .ratio-wrap .indicator .btn-arrow {
+#main-visual .slide-wrap .indicator .btn-arrow {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-top: 20px;
 }
-#main-visual .slide-wrap .panel > div .ratio-wrap .indicator .btn-arrow button {
+#main-visual .slide-wrap .indicator .btn-arrow button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -533,11 +539,11 @@ label {
   cursor: pointer;
   transition: 0.2s;
 }
-#main-visual .slide-wrap .panel > div .ratio-wrap .indicator .btn-arrow button:hover {
+#main-visual .slide-wrap .indicator .btn-arrow button:hover {
   background: #4eb3b3;
   color: #fff;
 }
-#main-visual .slide-wrap .panel > div .ratio-wrap .indicator .btn-arrow button:not(:first-child) {
+#main-visual .slide-wrap .indicator .btn-arrow button:not(:first-child) {
   margin-left: 10px;
 }
 
@@ -551,10 +557,13 @@ label {
     padding: 30px 20px;
   }
   #main-visual .slide-wrap .panel > div .ratio-wrap {
-    padding: 0 0 0 50px;
+    padding: 0 120px 0 50px;
   }
   #main-visual .slide-wrap .panel > div .ratio-wrap .img-box {
-    margin-right: 30px;
+    width: 100%;
+  }
+  #main-visual .slide-wrap .indicator {
+    right: 20px;
   }
 }
 @media screen and (max-width: 999px) {
@@ -568,7 +577,7 @@ label {
     width: 100%;
   }
   #main-visual .slide-wrap .panel > div .ratio-wrap {
-    padding: 0 0 0 30px;
+    padding: 0 120px 0 30px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -618,8 +627,13 @@ label {
   }
   #main-visual .slide-wrap .panel > div .ratio-wrap {
     width: 100%;
-    padding: 0;
+    padding: 0 120px 0 0;
     margin-top: 30px;
+  }
+  #main-visual .slide-wrap .indicator {
+    top: auto;
+    bottom: 30px;
+    transform: none;
   }
 }
 #main-book-list {
