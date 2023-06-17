@@ -315,10 +315,12 @@ label {
   color: #fff;
   opacity: 0;
   transition: opacity 0.2s;
+  z-index: -1;
   cursor: pointer;
 }
 .btn-top.on {
   opacity: 1;
+  z-index: auto;
 }
 .btn-top i {
   display: block;

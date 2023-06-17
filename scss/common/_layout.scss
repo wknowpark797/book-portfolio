@@ -43,10 +43,12 @@
 	color: #fff;
 	opacity: 0;
 	transition: opacity 0.2s;
+	z-index: -1;
 	cursor: pointer;
 
 	&.on {
 		opacity: 1;
+		z-index: auto;
 	}
 
 	i {
