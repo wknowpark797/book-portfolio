@@ -9,39 +9,66 @@
 </head>
 
 <body>
+  <div class="wrap"></div>
+
   <script>
 
+    const wrap = document.querySelector('.wrap');
     const userId = '105834502729522452212';
     const shelf = '1001'; // 내 라이브러리 > interest 서가
 
-    // 1. [ Bookshelf: list ] 내 라이브러리의 서가 목록
-    const test1 = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves`;
-    fetchData('[Bookshelf: list]', test1);
-
-    // 2. [ Volume: list ] 검색어에 해당하는 도서 목록
-    const test2 = `https://www.googleapis.com/books/v1/volumes?q=vue.js`;
-    fetchData('[Volume: list]', test2);
+    /*
+      // 1. [ Bookshelf: list ] 내 라이브러리의 서가 목록
+      const test1 = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves`;
+      fetchData('[Bookshelf: list]', test1);
+    */
+    /*
+      // 2. [ Volume: list ] 검색어에 해당하는 도서 목록
+      const test2 = `https://www.googleapis.com/books/v1/volumes?q=vue.js`;
+      fetchData('[Volume: list]', test2);
+    */
 
     // 3. [ Bookshelves.volumes: list ] 특정 서가에 해당하는 도서 목록
     const test3 = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes`;
     fetchData('[Bookshelves.volumes: list]', test3);
 
-    // 4. [ Mylibrary.bookshelves: list ] ? (옵션 파라미터 필요)
-    const test4 = `https://www.googleapis.com/books/v1/mylibrary/bookshelves`;
-    fetchData('[Mylibrary.bookshelves: list]', test4);
-
-    // 5. [ Mylibrary.bookshelves.volumes: list ] ?
-    const test5 = `https://www.googleapis.com/books/v1/mylibrary/bookshelves/${shelf}/volumes`;
-    fetchData('[Mylibrary.bookshelves.volumes: list]', test5);
+    /*
+      // 4. [ Mylibrary.bookshelves: list ] ? (옵션 파라미터 필요)
+      const test4 = `https://www.googleapis.com/books/v1/mylibrary/bookshelves`;
+      fetchData('[Mylibrary.bookshelves: list]', test4);
+    */
+    /*
+      // 5. [ Mylibrary.bookshelves.volumes: list ] ?
+      const test5 = `https://www.googleapis.com/books/v1/mylibrary/bookshelves/${shelf}/volumes`;
+      fetchData('[Mylibrary.bookshelves.volumes: list]', test5);
+    */
 
     async function fetchData(type, url) {
       try {
         const res = await fetch(url);
         const data = await res.json();
         console.log(type, data.items);
+
+        create(data.items);
       } catch (err) {
         console.log('error: ', err);
       }
+    }
+
+    function create(arr) {
+      let tags = '';
+
+      arr.forEach(item => {
+        tags += `
+          <article>
+            <h2>${item.volumeInfo.title}</h2>
+            <img src="${item.volumeInfo.imageLinks.thumbnail}">
+            <img src="${item.volumeInfo.imageLinks.thumbnail.replace('zoom=1', 'zoom=10')}">
+          </article>
+        `;
+      })
+
+      wrap.innerHTML = tags;
     }
 
   </script>
