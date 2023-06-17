@@ -304,6 +304,31 @@ label {
   color: #2ba9a9;
 }
 
+.btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #4eb3b3;
+  border-radius: 10px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+.btn-top.on {
+  opacity: 1;
+}
+.btn-top i {
+  display: block;
+  font-size: 10px;
+}
+.btn-top span {
+  display: block;
+  font-size: 12px;
+}
+
 @media screen and (max-width: 1200px) {
   .sub-content .sub-visual .title-wrap {
     width: 100%;
