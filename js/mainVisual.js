@@ -1,4 +1,11 @@
 const visualPanel = document.querySelector('#visualPanel');
+
+const currentWrap = document.querySelector('.current-number');
+let totalSlideNum = 0;
+let currentSlideNum = 1;
+const btnPrevVisual = document.querySelector('#btnPrevVisual');
+const btnNextVisual = document.querySelector('#btnNextVisual');
+
 const userId = '105834502729522452212';
 const shelf = '1001';
 const url = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes`;
@@ -9,9 +16,13 @@ async function fetchData(url) {
 	try {
 		const response = await fetch(url);
 		const data = await response.json();
-		console.log(data.items);
 
 		createDOM(data.items);
+
+		totalSlideNum = data.items.length;
+		createCurrent();
+
+		console.log(data.items);
 	} catch (err) {
 		console.log('err: ', err);
 	}
@@ -63,3 +74,21 @@ function createDOM(arr) {
 		visualPanel.innerHTML = tags;
 	});
 }
+
+function createCurrent() {
+	currentWrap.innerHTML = `<span>${'0' + currentSlideNum}</span> / ${'0' + totalSlideNum}`;
+}
+
+btnPrevVisual.addEventListener('click', () => {
+	currentSlideNum === 1 ? (currentSlideNum = totalSlideNum) : currentSlideNum--;
+	createCurrent();
+
+	visualPanel.prepend(visualPanel.lastElementChild);
+});
+
+btnNextVisual.addEventListener('click', () => {
+	currentSlideNum === totalSlideNum ? (currentSlideNum = 1) : currentSlideNum++;
+	createCurrent();
+
+	visualPanel.append(visualPanel.firstElementChild);
+});
