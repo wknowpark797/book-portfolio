@@ -8,7 +8,7 @@ const btnNextVisual = document.querySelector('#btnNextVisual');
 
 const userId = '105834502729522452212';
 const shelf = '1001';
-const url = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes`;
+const url = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes?maxResults=30`;
 
 fetchData(url);
 
@@ -32,7 +32,10 @@ function createDOM(arr) {
 	let tags = '';
 
 	arr.forEach((item) => {
-		const imgReplace = item.volumeInfo.imageLinks.thumbnail.replace('zoom=1', 'zoom=10');
+		const imgOriginReplace = item.volumeInfo.imageLinks.thumbnail
+			.replace('zoom=1', 'zoom=10')
+			.replace('edge=curl', 'edge=');
+		const imgShadowReplace = item.volumeInfo.imageLinks.thumbnail.replace('edge=curl', 'edge=');
 
 		tags += `
       <div>
@@ -59,11 +62,11 @@ function createDOM(arr) {
           <div class="double-wrap">
 
             <div class="img-box origin">
-              <img src="${imgReplace}" alt="">
+              <img src="${imgOriginReplace}" alt="">
             </div>
 
             <div class="img-box shadow">
-              <img src="${item.volumeInfo.imageLinks.thumbnail}" alt="">
+              <img src="${imgShadowReplace}" alt="">
             </div>
 
           </div>
@@ -76,7 +79,13 @@ function createDOM(arr) {
 }
 
 function createCurrent() {
-	currentWrap.innerHTML = `<span>${'0' + currentSlideNum}</span> / ${'0' + totalSlideNum}`;
+	if (currentSlideNum < 10) {
+		currentSlideNum = '0' + currentSlideNum;
+	}
+	if (totalSlideNum < 10) {
+		totalSlideNum = '0' + totalSlideNum;
+	}
+	currentWrap.innerHTML = `<span>${currentSlideNum}</span> / ${totalSlideNum}`;
 }
 
 btnPrevVisual.addEventListener('click', () => {
