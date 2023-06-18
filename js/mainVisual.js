@@ -7,7 +7,7 @@ const btnPrevVisual = document.querySelector('#btnPrevVisual');
 const btnNextVisual = document.querySelector('#btnNextVisual');
 
 const userId = '105834502729522452212';
-const shelf = '1001';
+const shelf = '1002';
 const url = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes?maxResults=30`;
 
 fetchData(url);
@@ -79,6 +79,9 @@ function createDOM(arr) {
 }
 
 function createCurrent() {
+	currentSlideNum = parseInt(currentSlideNum);
+	totalSlideNum = parseInt(totalSlideNum);
+
 	if (currentSlideNum < 10) {
 		currentSlideNum = '0' + currentSlideNum;
 	}
@@ -89,7 +92,7 @@ function createCurrent() {
 }
 
 btnPrevVisual.addEventListener('click', () => {
-	currentSlideNum === 1 ? (currentSlideNum = totalSlideNum) : currentSlideNum--;
+	parseInt(currentSlideNum) === 1 ? (currentSlideNum = totalSlideNum) : currentSlideNum--;
 	createCurrent();
 
 	visualPanel.prepend(visualPanel.lastElementChild);
