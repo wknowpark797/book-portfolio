@@ -1235,6 +1235,27 @@ label {
     font-size: 16px;
   }
 }
+.scroll-navi {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+.scroll-navi li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background: #4eb3b3;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.scroll-navi li:not(:first-child) {
+  margin-top: 13px;
+}
+.scroll-navi li.on {
+  height: 40px;
+}
+
 .members .intro-wrap {
   margin: 120px 0;
   display: flex;
