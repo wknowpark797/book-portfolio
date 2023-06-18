@@ -1,5 +1,6 @@
 const mapContainer = document.querySelector('#map');
 const btns = document.querySelectorAll('.list-branch li');
+const boxs = document.querySelectorAll('.library-info .inner-box');
 
 const markerInfo = [
 	{
@@ -40,7 +41,7 @@ const markerInfo = [
 const mapOption = { center: markerInfo[1].position, level: 3 };
 const map = new kakao.maps.Map(mapContainer, mapOption);
 
-markerInfo.forEach((item) => {
+markerInfo.forEach((item, idx) => {
 	const markerImage = new kakao.maps.MarkerImage(item.imgSrc, item.imgSize, item.imgOption);
 	const marker = new kakao.maps.Marker({
 		position: item.position,
@@ -48,5 +49,13 @@ markerInfo.forEach((item) => {
 	});
 	marker.setMap(map);
 
-	item.button.addEventListener('click', () => map.panTo(item.position));
+	item.button.addEventListener('click', (e) => {
+		for (const btn of btns) btn.classList.remove('on');
+		for (const box of boxs) box.classList.remove('on');
+
+		e.target.classList.add('on');
+		boxs[idx].classList.add('on');
+
+		map.panTo(item.position);
+	});
 });
