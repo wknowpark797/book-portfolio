@@ -1,0 +1,156 @@
+.location {
+	.library-wrap {
+		padding: 100px 0 120px;
+
+		.inner-container {
+			width: $subContainer;
+			margin: 0 auto;
+
+			.map-wrap {
+				position: relative;
+
+				#map {
+					width: 100%;
+					height: 400px;
+					background: #eee;
+					position: relative;
+				}
+
+				.list-branch {
+					display: flex;
+					align-items: center;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+
+					li {
+						width: 175px;
+						height: 57px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 15px;
+						font-weight: 500;
+						color: #333;
+						background: #f7f7f7;
+						transition: 0.2s;
+						cursor: pointer;
+
+						&:hover,
+						&.on {
+							color: #fff;
+							background: #4eb3b3;
+						}
+					}
+				}
+			}
+
+			.library-info {
+				margin-top: 50px;
+				display: flex;
+				align-items: flex-start;
+				gap: 20px;
+
+				.inner-box {
+					flex: 1;
+					min-height: 270px;
+					background: #f7f7f7;
+					padding: 30px;
+					position: relative;
+
+					h2 {
+						font-size: 18px;
+						color: #333;
+						margin-bottom: 15px;
+					}
+
+					ul {
+						li {
+							display: flex;
+							align-items: flex-start;
+
+							&:not(:first-child) {
+								margin-top: 10px;
+							}
+
+							i {
+								width: 16px;
+								font-size: 16px;
+								color: #333;
+								margin: 6px 13px 0 0;
+							}
+
+							p {
+								flex: 1;
+								font-size: 15px;
+								font-weight: 300;
+								line-height: 1.4;
+								color: #777;
+
+								a {
+									color: #777;
+								}
+							}
+						}
+					}
+
+					.sns-wrap {
+						display: flex;
+						gap: 10px;
+						position: absolute;
+						bottom: 30px;
+						left: 30px;
+
+						> a {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 30px;
+							height: 30px;
+							background: #555;
+							border-radius: 5px;
+							color: #f7f7f7;
+
+							i {
+								font-size: 14px;
+							}
+						}
+					}
+
+					&.on {
+						background: #4eb3b3;
+
+						h2 {
+							color: #fff;
+						}
+
+						ul {
+							li {
+								i {
+									color: #fff;
+								}
+
+								p {
+									color: #fff;
+									opacity: 0.8;
+
+									a {
+										color: #fff;
+									}
+								}
+							}
+						}
+
+						.sns-wrap {
+							> a {
+								background: #fff;
+								color: #4eb3b3;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
