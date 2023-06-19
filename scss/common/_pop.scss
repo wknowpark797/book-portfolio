@@ -31,6 +31,12 @@
 		}
 	}
 
+	.inner-detail {
+		height: 100%;
+		color: #fff;
+		overflow-y: scroll;
+	}
+
 	.pop-close {
 		font-family: 'Noto Serif KR';
 		font-size: 16px;

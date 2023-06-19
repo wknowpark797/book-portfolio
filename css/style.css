@@ -44,7 +44,7 @@ label {
 #header.header-main {
   width: 100%;
   position: absolute;
-  z-index: 9;
+  z-index: 1;
 }
 #header .inner-header {
   width: 1200px;
@@ -378,6 +378,11 @@ label {
 }
 .pop-wrap .inner-pop img {
   object-fit: contain;
+}
+.pop-wrap .inner-detail {
+  height: 100%;
+  color: #fff;
+  overflow-y: scroll;
 }
 .pop-wrap .pop-close {
   font-family: "Noto Serif KR";

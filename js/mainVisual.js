@@ -8,9 +8,9 @@ const btnNextVisual = document.querySelector('#btnNextVisual');
 
 const userId = '105834502729522452212';
 const shelf = '1002';
-const url = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes?maxResults=30`;
+const listURL = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes?maxResults=30`;
 
-fetchData(url);
+fetchData(listURL);
 
 async function fetchData(url) {
 	try {
@@ -55,7 +55,12 @@ function createDOM(arr) {
 
           <p class="content">${item.volumeInfo.description}</p>
 
-          <button type="button" class="btn-more">VIEW DETAIL</button>
+          <button type="button" 
+								id="btnDetailVisual" 
+								class="btn-more"
+								data-detail="${item.id}">
+						VIEW DETAIL
+					</button>
         </div>
 
         <div class="ratio-wrap">
@@ -104,3 +109,63 @@ btnNextVisual.addEventListener('click', () => {
 
 	visualPanel.append(visualPanel.firstElementChild);
 });
+
+// 이벤트 위임
+document.body.addEventListener('click', (e) => {
+	if (e.target.id === 'btnDetailVisual') {
+		const detailURL = `https://www.googleapis.com/books/v1/volumes/${e.target.dataset.detail}`;
+		fetchDetail(detailURL);
+	}
+
+	if (e.target.className === 'pop-close') removePop();
+});
+
+async function fetchDetail(url) {
+	try {
+		const response = await fetch(url);
+		const detail = await response.json();
+		console.log(detail.volumeInfo);
+
+		createPop(detail.volumeInfo);
+	} catch (err) {
+		console.log('err: ', err);
+	}
+}
+
+// 도서 상세 팝업
+function createPop(obj) {
+	const tags = `
+		<div class="inner-detail">
+			<img src="${obj.imageLinks.smallThumbnail}">
+			<p>제목: ${obj.title}</p>
+			<p>부제목: ${obj.subtitle}</p>
+			<p>작가: ${obj.authors}</p>
+			<p>카테고리: ${obj.categories}</p>
+			<p>설명글: ${obj.description}</p>
+			<p>출판사: ${obj.publisher}</p>
+			<p>출판일: ${obj.publishedDate}</p>
+		</div>
+		<button type="button" class="pop-close">close</button>
+	`;
+
+	const pop = document.createElement('aside');
+	pop.className = 'pop-wrap';
+	pop.innerHTML = tags;
+	document.body.append(pop);
+
+	setTimeout(() => {
+		document.querySelector('.pop-wrap').classList.add('on');
+	}, 0);
+
+	document.body.style.overflow = 'hidden';
+}
+
+function removePop() {
+	document.querySelector('.pop-wrap').classList.remove('on');
+
+	setTimeout(() => {
+		document.querySelector('.pop-wrap').remove();
+	}, 200);
+
+	document.body.style.overflow = 'auto';
+}
