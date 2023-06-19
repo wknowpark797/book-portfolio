@@ -9,7 +9,27 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/57de64ccd3.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=138c090e69fe7f8783709c1f2242d6c7"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script defer src="js/location.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init('jupOkSJY9CbSbfcLR');
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        this.contact_number.value = Math.random() * 100000 | 0;
+        emailjs.sendForm('service_9gz6979', 'template_p22mw5k', this)
+          .then(function () {
+            console.log('SUCCESS!');
+          }, function (error) {
+            console.log('FAILED...', error);
+          });
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -62,14 +82,42 @@
           <div id="map"></div>
 
           <ul class="list-branch">
-            <li>국회도서관</li>
-            <li class="on">남산도서관</li>
+            <li class="on">국회도서관</li>
+            <li>남산도서관</li>
             <li>별마당 도서관</li>
             <li>국립중앙도서관</li>
           </ul>
         </div>
 
         <div class="library-info">
+
+          <div class="contact-wrap">
+            <form id="contact-form">
+              <input type="hidden" name="contact_number">
+
+              <!-- user name -->
+              <div class="input-box">
+                <label for="userName" class="tit">Name</label>
+                <input type="text" name="user_name" id="userName" placeholder="이름을 입력하세요.">
+              </div>
+
+              <!-- user email -->
+              <div class="input-box">
+                <label for="userEmail" class="tit">Email</label>
+                <input type="email" name="user_email" id="userEmail" placeholder="이메일 주소를 입력하세요.">
+              </div>
+
+              <!-- message -->
+              <div class="input-box">
+                <label for="message" class="tit">Message</label>
+                <textarea name="message" id="message" placeholder="내용을 입력하세요."></textarea>
+              </div>
+
+              <div class="btn-wrap">
+                <input type="submit" value="SEND">
+              </div>
+            </form>
+          </div>
 
           <div class="inner-box">
             <h2>국회도서관</h2>
@@ -90,93 +138,6 @@
               <li>
                 <i class="fa-solid fa-phone"></i>
                 <p>02-6788-4211</p>
-              </li>
-            </ul>
-
-            <div class="sns-wrap">
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            </div>
-          </div>
-
-          <div class="inner-box on">
-            <h2>남산도서관</h2>
-
-            <ul>
-              <li>
-                <i class="fa-solid fa-location-dot"></i>
-                <p>서울특별시 용산구 소월로 109</p>
-              </li>
-              <li>
-                <i class="fa-solid fa-globe"></i>
-                <p>
-                  <a href="http://nslib.sen.go.kr/nslib_index.jsp" target="_blank">
-                    nslib.sen.go.kr
-                  </a>
-                </p>
-              </li>
-              <li>
-                <i class="fa-solid fa-phone"></i>
-                <p>02-754-7338</p>
-              </li>
-            </ul>
-
-            <div class="sns-wrap">
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            </div>
-          </div>
-
-          <div class="inner-box">
-            <h2>별마당 도서관</h2>
-
-            <ul>
-              <li>
-                <i class="fa-solid fa-location-dot"></i>
-                <p>서울특별시 강남구 영동대로 513 스타필드 코엑스몰 B1</p>
-              </li>
-              <li>
-                <i class="fa-solid fa-globe"></i>
-                <p>
-                  <a href="https://www.starfield.co.kr/coexmall/starfieldLibrary/library.do" target="_blank">
-                    starfield.co.kr
-                  </a>
-                </p>
-              </li>
-              <li>
-                <i class="fa-solid fa-phone"></i>
-                <p>02-6002-3031</p>
-              </li>
-            </ul>
-
-            <div class="sns-wrap">
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            </div>
-          </div>
-
-          <div class="inner-box">
-            <h2>국립중앙도서관</h2>
-
-            <ul>
-              <li>
-                <i class="fa-solid fa-location-dot"></i>
-                <p>서울특별시 서초구 반포대로 201</p>
-              </li>
-              <li>
-                <i class="fa-solid fa-globe"></i>
-                <p>
-                  <a href=https://www.nl.go.kr/" target="_blank">
-                    nl.go.kr
-                  </a>
-                </p>
-              </li>
-              <li>
-                <i class="fa-solid fa-phone"></i>
-                <p>02-535-4142</p>
               </li>
             </ul>
 

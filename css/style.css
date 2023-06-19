@@ -2449,21 +2449,16 @@ label {
 }
 .location .library-wrap .inner-container .library-info {
   margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 20px;
 }
 .location .library-wrap .inner-container .library-info .inner-box {
-  flex: 1;
   min-height: 278px;
-  background: #f7f7f7;
+  background: #4eb3b3;
   padding: 30px 30px 80px 30px;
   position: relative;
 }
 .location .library-wrap .inner-container .library-info .inner-box h2 {
   font-size: 18px;
-  color: #333;
+  color: #fff;
   margin-bottom: 15px;
 }
 .location .library-wrap .inner-container .library-info .inner-box ul li {
@@ -2476,7 +2471,7 @@ label {
 .location .library-wrap .inner-container .library-info .inner-box ul li i {
   width: 16px;
   font-size: 16px;
-  color: #333;
+  color: #fff;
   margin: 6px 13px 0 0;
 }
 .location .library-wrap .inner-container .library-info .inner-box ul li p {
@@ -2484,10 +2479,10 @@ label {
   font-size: 15px;
   font-weight: 300;
   line-height: 1.4;
-  color: #777;
+  color: #fff;
 }
 .location .library-wrap .inner-container .library-info .inner-box ul li p a {
-  color: #777;
+  color: #fff;
 }
 .location .library-wrap .inner-container .library-info .inner-box .sns-wrap {
   display: flex;
@@ -2502,32 +2497,12 @@ label {
   align-items: center;
   width: 30px;
   height: 30px;
-  background: #555;
+  background: #fff;
   border-radius: 5px;
-  color: #f7f7f7;
+  color: #4eb3b3;
 }
 .location .library-wrap .inner-container .library-info .inner-box .sns-wrap > a i {
   font-size: 14px;
-}
-.location .library-wrap .inner-container .library-info .inner-box.on {
-  background: #4eb3b3;
-}
-.location .library-wrap .inner-container .library-info .inner-box.on h2 {
-  color: #fff;
-}
-.location .library-wrap .inner-container .library-info .inner-box.on ul li i {
-  color: #fff;
-}
-.location .library-wrap .inner-container .library-info .inner-box.on ul li p {
-  color: #fff;
-  opacity: 0.8;
-}
-.location .library-wrap .inner-container .library-info .inner-box.on ul li p a {
-  color: #fff;
-}
-.location .library-wrap .inner-container .library-info .inner-box.on .sns-wrap > a {
-  background: #fff;
-  color: #4eb3b3;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2539,10 +2514,6 @@ label {
 @media screen and (max-width: 999px) {
   .location .library-wrap .inner-container .map-wrap .list-branch li {
     width: 25%;
-  }
-  .location .library-wrap .inner-container .library-info .inner-box {
-    flex: none;
-    width: calc(50% - 10px);
   }
 }
 @media screen and (max-width: 599px) {
@@ -2562,9 +2533,6 @@ label {
     width: 50%;
     height: 50px;
     font-size: 13px;
-  }
-  .location .library-wrap .inner-container .library-info .inner-box {
-    width: 100%;
   }
 }
 
