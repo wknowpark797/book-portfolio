@@ -377,7 +377,7 @@ label {
 .pop-wrap .inner-pop .inner-content {
   width: 100%;
   height: 100%;
-  padding: 48px 20px 20px;
+  padding: 48px 20px 35px;
 }
 .pop-wrap .inner-pop .inner-content .media-box {
   width: 100%;
@@ -403,6 +403,49 @@ label {
 }
 .pop-wrap .inner-pop .inner-content .media-box img {
   object-fit: contain;
+}
+.pop-wrap .inner-pop .inner-content .inner-detail {
+  display: flex;
+  align-items: flex-start;
+}
+.pop-wrap .inner-pop .inner-content .inner-detail .img-box {
+  width: 200px;
+  margin-right: 35px;
+}
+.pop-wrap .inner-pop .inner-content .inner-detail .img-box img {
+  width: 100%;
+}
+.pop-wrap .inner-pop .inner-content .inner-detail .info-wrap {
+  flex: 1;
+  max-height: calc(100vh - 192px);
+  overflow: auto;
+}
+.pop-wrap .inner-pop .inner-content .inner-detail .info-wrap h1 {
+  font-family: "Noto Serif KR";
+  font-size: 28px;
+  font-weight: 900;
+  color: #333;
+}
+.pop-wrap .inner-pop .inner-content .inner-detail .info-wrap h2 {
+  font-family: "Noto Serif KR";
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0 15px;
+}
+.pop-wrap .inner-pop .inner-content .inner-detail .info-wrap p,
+.pop-wrap .inner-pop .inner-content .inner-detail .info-wrap .description {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #555;
+}
+.pop-wrap .inner-pop .inner-content .inner-detail .info-wrap .authors {
+  font-family: "Noto Serif KR";
+  font-weight: 700;
+  color: #2ba9a9;
+}
+.pop-wrap .inner-pop .inner-content .inner-detail .info-wrap .description {
+  margin: 25px 0;
 }
 .pop-wrap .inner-pop .pop-close {
   position: absolute;

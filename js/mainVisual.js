@@ -117,7 +117,7 @@ document.body.addEventListener('click', (e) => {
 		fetchDetail(detailURL);
 	}
 
-	if (e.target.className === 'pop-close') removePop();
+	if (e.target.closest('.pop-close')) removePop();
 });
 
 async function fetchDetail(url) {
@@ -135,17 +135,32 @@ async function fetchDetail(url) {
 // 도서 상세 팝업
 function createPop(obj) {
 	const tags = `
-		<div class="inner-detail">
-			<img src="${obj.imageLinks.smallThumbnail}">
-			<p>제목: ${obj.title}</p>
-			<p>부제목: ${obj.subtitle}</p>
-			<p>작가: ${obj.authors}</p>
-			<p>카테고리: ${obj.categories}</p>
-			<p>설명글: ${obj.description}</p>
-			<p>출판사: ${obj.publisher}</p>
-			<p>출판일: ${obj.publishedDate}</p>
-		</div>
-		<button type="button" class="pop-close">close</button>
+		<div class="inner-pop">
+      <div class="inner-content">
+
+				<div class="inner-detail">
+					<div class="img-box">
+						<img src="${obj.imageLinks.small}">
+					</div>
+					
+					<div class="info-wrap">
+						<h1>${obj.title}</h1>
+						<h2>${obj.subtitle ? obj.subtitle : ''}</h2>
+						
+						<p class="authors">작가 : ${obj.authors}</p>
+						<div class="description">${obj.description}</div>
+						<p>카테고리 : ${obj.categories}</p>
+						<p>출판사 : ${obj.publisher}</p>
+						<p>출판일 : ${obj.publishedDate}</p>
+					</div>
+				</div>
+
+			</div>
+
+      <button type="button" class="pop-close">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
 	`;
 
 	const pop = document.createElement('aside');
