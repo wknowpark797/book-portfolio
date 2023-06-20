@@ -108,7 +108,7 @@ function setURL(type, opt) {
 // 이벤트 위임
 document.body.addEventListener('click', (e) => {
 	if (e.target.className === 'picture') createPop(e.target.getAttribute('alt'));
-	if (e.target.className === 'pop-close') removePop();
+	if (e.target.closest('.pop-close')) removePop();
 	if (e.target.className === 'profile-img') fetchData(setURL('user', e.target.getAttribute('alt')));
 	if (e.target.className === 'profile-user') fetchData(setURL('user', e.target.innerText));
 });
@@ -117,9 +117,16 @@ document.body.addEventListener('click', (e) => {
 function createPop(img) {
 	const tags = `
 		<div class="inner-pop">
-			<img src="${img}" >
-		</div>
-		<button type="button" class="pop-close">close</button>
+      <div class="inner-content">
+				<div class="media-box">
+					<img src="${img}" >
+				</div>
+			</div>
+
+      <button type="button" class="pop-close">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
 	`;
 
 	const pop = document.createElement('aside');

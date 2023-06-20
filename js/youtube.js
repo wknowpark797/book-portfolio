@@ -101,16 +101,23 @@ function createBestTags(wrap, items) {
 // 이벤트 위임
 document.body.addEventListener('click', (e) => {
 	if (e.target.closest('.thumb')) createPop(e.target.closest('.thumb').dataset.videoid);
-	if (e.target.className === 'pop-close') removePop();
+	if (e.target.closest('.pop-close')) removePop();
 });
 
 // 팝업 생성 함수
 function createPop(id) {
 	const tags = `
 		<div class="inner-pop">
-			<iframe src="https://www.youtube.com/embed/${id}"></iframe>
-		</div>
-		<button type="button" class="pop-close">close</button>
+      <div class="inner-content">
+				<div class="media-box">
+					<iframe src="https://www.youtube.com/embed/${id}"></iframe>
+				</div>
+			</div>
+
+      <button type="button" class="pop-close">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
 	`;
 
 	const pop = document.createElement('aside');
