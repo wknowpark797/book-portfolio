@@ -13,6 +13,7 @@
   <script defer type="module" src="js/mainVisual.js"></script>
   <script defer type="module" src="js/mainBookList.js"></script>
   <script defer type="module" src="js/mainYoutube.js"></script>
+  <script defer type="module" src="js/mainCommentList.js"></script>
 </head>
 
 <body>
@@ -251,9 +252,8 @@
       </div>
 
       <div class="slide-wrap">
-        <article class="panel">
-
-          <div>
+        <article id="commentListPanel" class="panel">
+          <!-- <div>
             <div class="profile-box">
               <img src="img/example_user.jpg" alt="">
             </div>
@@ -264,67 +264,14 @@
               <p class="user">nickname</p>
               <p>2023.06.01</p>
             </div>
-          </div>
-
-          <div>
-            <div class="profile-box">
-              <img src="img/example_user.jpg" alt="">
-            </div>
-            <div class="info-box">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos officiis fugiat laborum quasi ab nisi
-                atque
-                dolor animi eaque repellat. Tempore atque neque temporibus porro deleniti praesentium ipsa ad iste!</p>
-              <p class="user">nickname</p>
-              <p>2023.06.01</p>
-            </div>
-          </div>
-
-          <div>
-            <div class="profile-box">
-              <img src="img/example_user.jpg" alt="">
-            </div>
-            <div class="info-box">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe,
-                nulla
-                veniam aliquam. Ea dicta officia dolorum.</p>
-              <p class="user">nickname</p>
-              <p>2023.06.01</p>
-            </div>
-          </div>
-
-          <div>
-            <div class="profile-box">
-              <img src="img/example_user.jpg" alt="">
-            </div>
-            <div class="info-box">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe,
-                nulla
-                veniam aliquam. Ea dicta officia dolorum.</p>
-              <p class="user">nickname</p>
-              <p>2023.06.01</p>
-            </div>
-          </div>
-
-          <div>
-            <div class="profile-box">
-              <img src="img/example_user.jpg" alt="">
-            </div>
-            <div class="info-box">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe,
-                nulla
-                veniam aliquam. Ea dicta officia dolorum.</p>
-              <p class="user">nickname</p>
-              <p>2023.06.01</p>
-            </div>
-          </div>
-
+          </div> -->
         </article>
 
         <div class="arrow">
-          <button type="button" class="prev">
+          <button type="button" id="btnPrevComment" class="prev">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
-          <button type="button" class="next">
+          <button type="button" id="btnNextComment" class="next">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
         </div>
