@@ -922,6 +922,61 @@ label {
   height: 100%;
   object-fit: cover;
 }
+#main-gallery .inner-container .box-wrap .bookImg1 {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 0.7s 0.2s;
+}
+#main-gallery .inner-container .box-wrap .bookImg2 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 0.7s 0.3s;
+}
+#main-gallery .inner-container .box-wrap .bookImg3 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 0.7s 0.4s;
+}
+#main-gallery .inner-container .box-wrap .bookImg4 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 0.7s 0.5s;
+}
+#main-gallery .inner-container .box-wrap .bookImg5 {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 0.7s 0.6s;
+}
+#main-gallery .inner-container .box-wrap .bookImg6 {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 0.7s 0.7s;
+}
+
+#main-gallery.on .inner-container .box-wrap .bookImg1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+#main-gallery.on .inner-container .box-wrap .bookImg2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+#main-gallery.on .inner-container .box-wrap .bookImg3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+#main-gallery.on .inner-container .box-wrap .bookImg4 {
+  opacity: 1;
+  transform: translateY(0);
+}
+#main-gallery.on .inner-container .box-wrap .bookImg5 {
+  opacity: 1;
+  transform: translateX(0);
+}
+#main-gallery.on .inner-container .box-wrap .bookImg6 {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 @media screen and (max-width: 1200px) {
   #main-gallery .inner-container {

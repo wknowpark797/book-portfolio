@@ -63,6 +63,68 @@
 					}
 				}
 			}
+
+			.bookImg1 {
+				opacity: 0;
+				transform: translateY(-100px);
+				transition: 0.7s 0.2s;
+			}
+			.bookImg2 {
+				opacity: 0;
+				transform: translateY(100px);
+				transition: 0.7s 0.3s;
+			}
+			.bookImg3 {
+				opacity: 0;
+				transform: translateY(100px);
+				transition: 0.7s 0.4s;
+			}
+			.bookImg4 {
+				opacity: 0;
+				transform: translateY(100px);
+				transition: 0.7s 0.5s;
+			}
+			.bookImg5 {
+				opacity: 0;
+				transform: translateX(100px);
+				transition: 0.7s 0.6s;
+			}
+			.bookImg6 {
+				opacity: 0;
+				transform: translateX(100px);
+				transition: 0.7s 0.7s;
+			}
+		}
+	}
+}
+
+#main-gallery.on {
+	.inner-container {
+		.box-wrap {
+			.bookImg1 {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			.bookImg2 {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			.bookImg3 {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			.bookImg4 {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			.bookImg5 {
+				opacity: 1;
+				transform: translateX(0);
+			}
+			.bookImg6 {
+				opacity: 1;
+				transform: translateX(0);
+			}
 		}
 	}
 }
