@@ -77,6 +77,58 @@
 					}
 				}
 			}
+
+			article:nth-of-type(1) {
+				.img-box {
+					opacity: 0;
+					transform: translateY(-100px);
+					transition: 0.7s 0.2s;
+				}
+				.info-box {
+					opacity: 0;
+					transform: translateY(100px);
+					transition: 0.7s 0.4s;
+				}
+			}
+			article:nth-of-type(2) {
+				.img-box {
+					opacity: 0;
+					transform: translateY(-100px);
+					transition: 0.7s 0.6s;
+				}
+				.info-box {
+					opacity: 0;
+					transform: translateY(100px);
+					transition: 0.7s 0.8s;
+				}
+			}
+		}
+	}
+}
+
+#main-location.on {
+	.inner-container {
+		.company-wrap {
+			article:nth-of-type(1) {
+				.img-box {
+					opacity: 1;
+					transform: translateY(0);
+				}
+				.info-box {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+			article:nth-of-type(2) {
+				.img-box {
+					opacity: 1;
+					transform: translateY(0);
+				}
+				.info-box {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
 		}
 	}
 }
