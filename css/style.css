@@ -1138,9 +1138,6 @@ label {
     width: 100%;
     margin-top: 50px;
   }
-  #main-youtube-list .inner-container .inner-content .video-wrap article {
-    height: 230px;
-  }
 }
 @media screen and (max-width: 599px) {
   #main-youtube-list .inner-container .title-wrap h1 {
