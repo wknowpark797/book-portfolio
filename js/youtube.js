@@ -138,7 +138,7 @@ function removePop() {
 
 	setTimeout(() => {
 		document.querySelector('.pop-wrap').remove();
-	}, 200);
+	}, 400);
 
 	document.body.style.overflow = 'auto';
 }
