@@ -232,6 +232,34 @@ $slideLength: 5;
 	}
 }
 
+#main-visual.on {
+	.rating-wrap {
+		.star-box {
+			@for $i from 1 through 5 {
+				span:nth-of-type(#{$i}) {
+					&.on {
+						i {
+							animation: star 0.7s $i * 0.2s;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes star {
+	0% {
+		transform: scale(1) rotate(0deg);
+	}
+	50% {
+		transform: scale(1.5) rotate(90deg);
+	}
+	100% {
+		transform: scale(1) rotate(0deg);
+	}
+}
+
 @media screen and (max-width: 1230px) {
 	#main-visual {
 		.slide-wrap {
