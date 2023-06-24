@@ -64,8 +64,24 @@ const markerInfo = [
 	},
 ];
 
+searchParam('library');
+buttonActivation();
+
+// URL 도서관 정보로 진입
+function searchParam(param) {
+	const queryIndex = new URLSearchParams(location.search).get(param);
+	if (!queryIndex) return;
+	activeIndex = queryIndex;
+}
+
+// 도서관 Button Activation
+function buttonActivation() {
+	for (const btn of btns) btn.classList.remove('on');
+	btns[activeIndex].classList.add('on');
+}
+
 // 화면 로딩 시 지도 생성
-const mapOption = { center: markerInfo[0].position, level: 3 };
+const mapOption = { center: markerInfo[activeIndex].position, level: 3 };
 const map = new kakao.maps.Map(mapContainer, mapOption);
 map.setZoomable(false); // 지도 확대, 축소 막기 (mousewheel)
 createDOM();
@@ -90,9 +106,7 @@ markerInfo.forEach((item, idx) => {
 	item.button.addEventListener('click', (e) => {
 		activeIndex = idx;
 		map.panTo(item.position);
-
-		for (const btn of btns) btn.classList.remove('on');
-		btns[activeIndex].classList.add('on');
+		buttonActivation();
 		createDOM();
 	});
 });
