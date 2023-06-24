@@ -66,6 +66,9 @@ $slideLength: 5;
 						line-height: 1.5;
 						color: #333;
 						margin-left: auto;
+						opacity: 0;
+						transform: translateY(50px);
+						transition: 0.7s 0.2s;
 					}
 
 					.rating-wrap {
@@ -73,6 +76,9 @@ $slideLength: 5;
 						justify-content: flex-end;
 						align-items: center;
 						margin-top: 20px;
+						opacity: 0;
+						transform: translateY(50px);
+						transition: 0.7s 0.4s;
 
 						.star-box {
 							span {
@@ -109,6 +115,9 @@ $slideLength: 5;
 						color: #555;
 						margin: 30px 0 0 auto;
 						word-break: break-all;
+						opacity: 0;
+						transform: translateY(50px);
+						transition: 0.7s 0.6s;
 
 						white-space: normal;
 						display: -webkit-box;
@@ -129,6 +138,9 @@ $slideLength: 5;
 						text-align: center;
 						margin-top: 30px;
 						cursor: pointer;
+						opacity: 0;
+						transform: translateY(50px);
+						transition: 0.7s 0.8s;
 					}
 				}
 
@@ -179,6 +191,45 @@ $slideLength: 5;
 					}
 				}
 			}
+
+			.swiper-slide-active {
+				.detail-wrap {
+					h1 {
+						opacity: 1;
+						transform: translateY(0);
+					}
+					.rating-wrap {
+						opacity: 1;
+						transform: translateY(0);
+
+						.star-box {
+							span:nth-of-type(1).on i {
+								animation: star 0.7s 1.2s;
+							}
+							span:nth-of-type(2).on i {
+								animation: star 0.7s 1.6s;
+							}
+							span:nth-of-type(3).on i {
+								animation: star 0.7s 2s;
+							}
+							span:nth-of-type(4).on i {
+								animation: star 0.7s 2.4s;
+							}
+							span:nth-of-type(5).on i {
+								animation: star 0.7s 2.8s;
+							}
+						}
+					}
+					.content {
+						opacity: 1;
+						transform: translateY(0);
+					}
+					.btn-more {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+			}
 		}
 
 		.indicator {
@@ -226,22 +277,6 @@ $slideLength: 5;
 
 					&:not(:first-child) {
 						margin-left: 10px;
-					}
-				}
-			}
-		}
-	}
-}
-
-#main-visual.on {
-	.rating-wrap {
-		.star-box {
-			@for $i from 1 through 5 {
-				span:nth-of-type(#{$i}) {
-					&.on {
-						i {
-							animation: star 0.7s $i * 0.2s;
-						}
 					}
 				}
 			}

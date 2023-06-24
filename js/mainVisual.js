@@ -209,4 +209,7 @@ const swiper = new Swiper('.mainVisualSwiper', {
 		prevEl: '#btnPrevVisual',
 	},
 	slidesPerView: 1,
+	autoplay: {
+		delay: 5000,
+	},
 });
