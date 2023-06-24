@@ -873,13 +873,13 @@ label {
   width: 1100px;
   display: flex;
   align-items: flex-start;
-  gap: 30px;
 }
 #main-book-list .inner-container .slide-wrap .panel > div {
+  width: 220px;
   cursor: pointer;
 }
 #main-book-list .inner-container .slide-wrap .panel > div .ratio-wrap {
-  width: 220px;
+  width: 100%;
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -939,7 +939,7 @@ label {
   #main-book-list .inner-container .slide-wrap {
     margin-top: 30px;
   }
-  #main-book-list .inner-container .slide-wrap .panel > div .ratio-wrap {
+  #main-book-list .inner-container .slide-wrap .panel > div {
     width: 135px;
   }
 }

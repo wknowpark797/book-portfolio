@@ -59,13 +59,13 @@ $slideWidth: 220px;
 				width: calc($slideWidth * $slideLength);
 				display: flex;
 				align-items: flex-start;
-				gap: 30px;
 
 				> div {
+					width: $slideWidth;
 					cursor: pointer;
 
 					.ratio-wrap {
-						width: $slideWidth;
+						width: 100%;
 						position: relative;
 						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 
@@ -143,9 +143,7 @@ $slideWidth: 220px;
 
 				.panel {
 					> div {
-						.ratio-wrap {
-							width: 135px;
-						}
+						width: 135px;
 					}
 				}
 			}

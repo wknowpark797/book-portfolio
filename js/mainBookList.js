@@ -8,13 +8,16 @@ const listURL = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves
 
 fetchData(listURL);
 
-btnPrevBook.addEventListener('click', () => {
-	bookListPanel.prepend(bookListPanel.lastElementChild);
-});
-
-btnNextBook.addEventListener('click', () => {
-	bookListPanel.append(bookListPanel.firstElementChild);
-});
+/*
+	btnPrevBook.addEventListener('click', () => {
+		bookListPanel.prepend(bookListPanel.lastElementChild);
+	});
+*/
+/*
+	btnNextBook.addEventListener('click', () => {
+		bookListPanel.append(bookListPanel.firstElementChild);
+	});
+*/
 
 // 이벤트 위임
 document.body.addEventListener('click', (e) => {
@@ -24,6 +27,8 @@ document.body.addEventListener('click', (e) => {
 		}`;
 		fetchDetail(detailURL);
 	}
+
+	if (e.target.closest('.pop-close')) removePop();
 });
 
 // 도서 목록 fetch 함수
@@ -47,7 +52,7 @@ function createDOM(arr) {
 		const imgReplace = item.volumeInfo.imageLinks.thumbnail.replace('zoom=1', 'zoom=10');
 
 		tags += `
-      <div class="btnDetailBook" data-detail="${item.id}">
+      <div class="btnDetailBook swiper-slide" data-detail="${item.id}">
         <div class="ratio-wrap">
           <div class="img-box">
             <img src="${imgReplace}" alt="">
@@ -131,3 +136,16 @@ function removePop() {
 
 	document.body.style.overflow = 'auto';
 }
+
+// Swiper
+const swiper = new Swiper('.bookListSwiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 30,
+	navigation: {
+		nextEl: '#btnNextBook',
+		prevEl: '#btnPrevBook',
+	},
+	autoplay: {
+		delay: 1000,
+	},
+});
