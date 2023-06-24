@@ -32,7 +32,6 @@ $slideWidth: 500px;
 				width: calc($slideWidth * $slideLength);
 				display: flex;
 				align-items: center;
-				gap: 30px;
 
 				> div {
 					width: $slideWidth;
@@ -149,7 +148,6 @@ $slideWidth: 500px;
 			.slide-wrap {
 				.panel {
 					width: calc(100% * $slideLength);
-					gap: 18px;
 
 					> div {
 						width: calc(100% / $slideLength);

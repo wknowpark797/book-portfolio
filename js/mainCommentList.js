@@ -2,13 +2,16 @@ const commentListPanel = document.querySelector('#commentListPanel');
 const btnPrevComment = document.querySelector('#btnPrevComment');
 const btnNextComment = document.querySelector('#btnNextComment');
 
-btnPrevComment.addEventListener('click', () => {
-	commentListPanel.prepend(commentListPanel.lastElementChild);
-});
-
-btnNextComment.addEventListener('click', () => {
-	commentListPanel.append(commentListPanel.firstElementChild);
-});
+/*
+  btnPrevComment.addEventListener('click', () => {
+    commentListPanel.prepend(commentListPanel.lastElementChild);
+  });
+*/
+/*
+  btnNextComment.addEventListener('click', () => {
+    commentListPanel.append(commentListPanel.firstElementChild);
+  });
+*/
 
 fetchData('DB/comments.json');
 
@@ -24,7 +27,7 @@ function createDOM(items) {
 
 	items.forEach((item) => {
 		tags += `
-      <div>
+      <div class="swiper-slide">
         <div class="profile-box">
           <img src="img/${item.profileImg}" alt="">
         </div>
@@ -39,3 +42,16 @@ function createDOM(items) {
 
 	commentListPanel.innerHTML = tags;
 }
+
+// Swiper
+const swiper = new Swiper('.commentListSwiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 30,
+	navigation: {
+		nextEl: '#btnNextComment',
+		prevEl: '#btnPrevComment',
+	},
+	autoplay: {
+		delay: 2500,
+	},
+});

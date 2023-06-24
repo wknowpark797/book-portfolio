@@ -320,7 +320,7 @@ label {
 }
 .btn-top.on {
   opacity: 1;
-  z-index: auto;
+  z-index: 1;
 }
 .btn-top i {
   display: block;
@@ -1267,7 +1267,6 @@ label {
   width: 2500px;
   display: flex;
   align-items: center;
-  gap: 30px;
 }
 #main-comment-list .inner-container .slide-wrap .panel > div {
   width: 500px;
@@ -1356,7 +1355,6 @@ label {
 @media screen and (max-width: 520px) {
   #main-comment-list .inner-container .slide-wrap .panel {
     width: 500%;
-    gap: 18px;
   }
   #main-comment-list .inner-container .slide-wrap .panel > div {
     width: 20%;
