@@ -11,19 +11,22 @@ const listURL = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves
 
 fetchData(listURL);
 
-btnPrevVisual.addEventListener('click', () => {
-	parseInt(currentSlideNum) === 1 ? (currentSlideNum = totalSlideNum) : currentSlideNum--;
-	createCurrent();
+/*
+	btnPrevVisual.addEventListener('click', () => {
+		parseInt(currentSlideNum) === 1 ? (currentSlideNum = totalSlideNum) : currentSlideNum--;
+		createCurrent();
 
-	visualPanel.prepend(visualPanel.lastElementChild);
-});
+		visualPanel.prepend(visualPanel.lastElementChild);
+	});
+*/
+/*
+	btnNextVisual.addEventListener('click', () => {
+		currentSlideNum === totalSlideNum ? (currentSlideNum = 1) : currentSlideNum++;
+		createCurrent();
 
-btnNextVisual.addEventListener('click', () => {
-	currentSlideNum === totalSlideNum ? (currentSlideNum = 1) : currentSlideNum++;
-	createCurrent();
-
-	visualPanel.append(visualPanel.firstElementChild);
-});
+		visualPanel.append(visualPanel.firstElementChild);
+	});
+*/
 
 // 이벤트 위임
 document.body.addEventListener('click', (e) => {
@@ -43,8 +46,8 @@ async function fetchData(url) {
 
 		createDOM(data.items);
 
-		totalSlideNum = data.items.length;
-		createCurrent();
+		// totalSlideNum = data.items.length;
+		// createCurrent();
 
 		console.log(data.items);
 	} catch (err) {
@@ -63,7 +66,7 @@ function createDOM(arr) {
 		const imgShadowReplace = item.volumeInfo.imageLinks.thumbnail.replace('edge=curl', 'edge=');
 
 		tags += `
-      <div>
+      <div class="swiper-slide">
         <div class="detail-wrap">
           <h1>${item.volumeInfo.title}</h1>
 
@@ -188,3 +191,22 @@ function removePop() {
 
 	document.body.style.overflow = 'auto';
 }
+
+// Swiper
+const swiper = new Swiper('.mainVisualSwiper', {
+	pagination: {
+		el: '.current-number',
+		type: 'fraction',
+		formatFractionCurrent: function (num) {
+			return num < 10 && (num = '0' + num);
+		},
+		formatFractionTotal: function (num) {
+			return num < 10 && (num = '0' + num);
+		},
+	},
+	navigation: {
+		nextEl: '#btnNextVisual',
+		prevEl: '#btnPrevVisual',
+	},
+	slidesPerView: 1,
+});

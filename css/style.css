@@ -640,6 +640,7 @@ label {
   position: absolute;
   bottom: 0;
   right: 30px;
+  z-index: 1;
 }
 #main-visual .slide-wrap .indicator .current-number {
   font-family: "Noto Serif KR";
@@ -648,7 +649,7 @@ label {
   color: #333;
   text-align: right;
 }
-#main-visual .slide-wrap .indicator .current-number span {
+#main-visual .slide-wrap .indicator .current-number .swiper-pagination-current {
   display: block;
   font-size: 50px;
   font-weight: 900;
