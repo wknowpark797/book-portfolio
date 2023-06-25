@@ -1,18 +1,37 @@
-const form = document.querySelector('#formSignup');
-const btnSubmit = form.querySelector('input[type=submit]');
+// 회원가입 Form
+const formSignup = document.querySelector('#formSignup');
+formSignup && signUpValidate();
 
-btnSubmit.addEventListener('click', (e) => {
-	if (!isText('userid', 5)) e.preventDefault();
-	if (!isText('comments', 10)) e.preventDefault();
-	if (!isPwd('pwd1', 'pwd2', 4)) e.preventDefault();
-	if (!isEmail('email')) e.preventDefault();
-	if (!isCheck('gender')) e.preventDefault();
-	if (!isCheck('hobby')) e.preventDefault();
-	if (!isSelect('edu')) e.preventDefault();
-});
+function signUpValidate() {
+	const btnSignup = formSignup.querySelector('input[type=submit]');
+
+	btnSignup.addEventListener('click', (e) => {
+		if (!isText(formSignup, 'userid', 5)) e.preventDefault();
+		if (!isText(formSignup, 'comments', 10)) e.preventDefault();
+		if (!isPwd(formSignup, 'pwd1', 'pwd2', 4)) e.preventDefault();
+		if (!isEmail(formSignup, 'email')) e.preventDefault();
+		if (!isCheck(formSignup, 'gender')) e.preventDefault();
+		if (!isCheck(formSignup, 'hobby')) e.preventDefault();
+		if (!isSelect(formSignup, 'edu')) e.preventDefault();
+	});
+}
+
+// Location Form
+const formContact = document.querySelector('#formContact');
+formContact && contactValidate();
+
+function contactValidate() {
+	const btnContact = formContact.querySelector('input[type=submit]');
+
+	btnContact.addEventListener('click', (e) => {
+		if (!isText(formContact, 'username', 2)) e.preventDefault();
+		if (!isEmail(formContact, 'email')) e.preventDefault();
+		if (!isText(formContact, 'message', 10)) e.preventDefault();
+	});
+}
 
 // 텍스트 항목 인증
-function isText(name, length) {
+function isText(form, name, length) {
 	const input = form.querySelector(`[name=${name}]`);
 	const value = input.value.trim();
 
@@ -20,7 +39,7 @@ function isText(name, length) {
 		resetError(input);
 		const errMsg = document.createElement('p');
 		errMsg.className = 'error';
-		errMsg.innerText = `입력 항목에 ${length}글자 이상 입력하세요.`;
+		errMsg.innerText = `${length}글자 이상 입력하세요.`;
 		input.closest('.input-box').append(errMsg);
 		return false;
 	} else {
@@ -30,7 +49,7 @@ function isText(name, length) {
 }
 
 // 비밀번호 항목 인증
-function isPwd(pwd1, pwd2, length) {
+function isPwd(form, pwd1, pwd2, length) {
 	const pwdEl1 = form.querySelector(`[name=${pwd1}]`);
 	const pwdVal1 = form.querySelector(`[name=${pwd1}]`).value;
 	const pwdVal2 = form.querySelector(`[name=${pwd2}]`).value;
@@ -59,7 +78,7 @@ function isPwd(pwd1, pwd2, length) {
 }
 
 // 이메일 항목 인증
-function isEmail(name) {
+function isEmail(form, name) {
 	const email = form.querySelector(`[name=${name}]`);
 	const emailVal = email.value;
 
@@ -90,15 +109,15 @@ function isEmail(name) {
 		resetError(email);
 		const errMsg = document.createElement('p');
 		errMsg.className = 'error';
-		errMsg.innerText = `@를 포함하세요.`;
+		errMsg.innerText = `@를 포함하여 입력하세요.`;
 		email.closest('.input-box').append(errMsg);
 		return false;
 	}
 }
 
 // radio, check 요소 인증
-function isCheck(name) {
-	const inputs = document.querySelectorAll(`[name=${name}]`);
+function isCheck(form, name) {
+	const inputs = form.querySelectorAll(`[name=${name}]`);
 
 	let isChecked = false;
 
@@ -118,7 +137,7 @@ function isCheck(name) {
 }
 
 // select 요소 인증
-function isSelect(name) {
+function isSelect(form, name) {
 	const input = form.querySelector(`[name=${name}]`);
 	const selectedIndex = input.options.selectedIndex;
 	const value = input.options[selectedIndex].value;

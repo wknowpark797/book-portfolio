@@ -26,6 +26,13 @@ body {
   overflow-x: hidden;
 }
 
+form .error {
+  font-size: 12px;
+  font-weight: 300;
+  color: #e30000;
+  margin: 5px 0 0 5px;
+}
+
 fieldset {
   border: none;
 }
@@ -2520,12 +2527,6 @@ label {
 }
 .sign-up .inner-container .signup-box .form-signup .input-box:not(:first-child) {
   margin-top: 25px;
-}
-.sign-up .inner-container .signup-box .form-signup .input-box .error {
-  font-size: 12px;
-  font-weight: 300;
-  color: #e30000;
-  margin: 5px 0 0 5px;
 }
 .sign-up .inner-container .signup-box .form-signup .input-box .tit {
   display: block;
