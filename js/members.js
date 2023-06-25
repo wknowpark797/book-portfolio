@@ -63,3 +63,17 @@ fetch('DB/members.json')
 	.catch((err) => {
 		console.log(err);
 	});
+
+// Swiper
+const swiper = new Swiper('.membersSwiper', {
+	slidesPerView: 'auto',
+	centeredSlides: true,
+	breakpoints: {
+		0: {
+			spaceBetween: 30,
+		},
+		600: {
+			spaceBetween: 50,
+		},
+	},
+});

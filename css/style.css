@@ -1666,17 +1666,14 @@ label {
   margin-top: 10px;
 }
 .members .intro-person .tab {
-  display: flex;
-  justify-content: flex-end;
+  overflow: hidden;
 }
 .members .intro-person .tab ul {
   display: flex;
   align-items: center;
-  width: calc(100% - ((100% - 1200px) / 2 + 350px));
-  overflow: hidden;
 }
-.members .intro-person .tab ul li:not(:first-child) {
-  margin-left: 55px;
+.members .intro-person .tab ul li {
+  width: auto;
 }
 .members .intro-person .tab ul li a {
   font-size: 32px;
@@ -1684,7 +1681,7 @@ label {
   color: #dfdfdf;
   transition: 0.2s;
 }
-.members .intro-person .tab ul li.on a, .members .intro-person .tab ul li:hover a {
+.members .intro-person .tab ul li.swiper-slide-active a {
   color: #555;
 }
 .members .intro-person .inner-person {
@@ -1826,10 +1823,6 @@ label {
     width: calc(50% - 50px);
     margin-left: 50px;
   }
-  .members .intro-person .tab ul {
-    width: 100%;
-    padding-left: 150px;
-  }
   .members .intro-person .inner-person .inner-container .person-wrap article {
     width: calc(33.3333% - 14px);
   }
@@ -1933,12 +1926,6 @@ label {
     bottom: auto;
     right: auto;
     text-align: center;
-  }
-  .members .intro-person .tab ul {
-    padding-left: 35px;
-  }
-  .members .intro-person .tab ul li:not(:first-child) {
-    margin-left: 30px;
   }
   .members .intro-person .tab ul li a {
     font-size: 24px;

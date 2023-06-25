@@ -138,19 +138,14 @@
 
 	.intro-person {
 		.tab {
-			display: flex;
-			justify-content: flex-end;
+			overflow: hidden;
 
 			ul {
 				display: flex;
 				align-items: center;
-				width: calc(100% - calc(calc(calc(100% - $subContainer) / 2) + 350px));
-				overflow: hidden;
 
 				li {
-					&:not(:first-child) {
-						margin-left: 55px;
-					}
+					width: auto;
 
 					a {
 						font-size: 32px;
@@ -159,8 +154,7 @@
 						transition: 0.2s;
 					}
 
-					&.on,
-					&:hover {
+					&.swiper-slide-active {
 						a {
 							color: #555;
 						}
@@ -358,13 +352,6 @@
 		}
 
 		.intro-person {
-			.tab {
-				ul {
-					width: 100%;
-					padding-left: 150px;
-				}
-			}
-
 			.inner-person {
 				.inner-container {
 					.person-wrap {
@@ -546,13 +533,7 @@
 		.intro-person {
 			.tab {
 				ul {
-					padding-left: 35px;
-
 					li {
-						&:not(:first-child) {
-							margin-left: 30px;
-						}
-
 						a {
 							font-size: 24px;
 						}
