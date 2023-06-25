@@ -3,44 +3,52 @@
     {
       "name": "Julia Jung",
       "position": "President",
-      "pic": "member1.jpg"
+      "pic": "member1.jpg",
+      "department": "designer"
     },
     {
       "name": "David Choi",
       "position": "Vice President",
-      "pic": "member2.jpg"
+      "pic": "member2.jpg",
+      "department": "photographer"
     },
     {
       "name": "Emily Simpson",
       "position": "UI Designer",
-      "pic": "member3.jpg"
+      "pic": "member3.jpg",
+      "department": "developer"
     },
     {
       "name": "Paul Davison",
       "position": "Front-end Engineer",
-      "pic": "member4.jpg"
+      "pic": "member4.jpg",
+      "department": "publisher"
     },
     {
       "name": "Sara Kim",
       "position": "Back-end Engineer",
-      "pic": "member5.jpg"
+      "pic": "member5.jpg",
+      "department": "developer"
     },
     {
       "name": "Michael",
       "position": "Project Manager",
-      "pic": "member6.jpg"
+      "pic": "member6.jpg",
+      "department": "developer"
     }
   ],
   "directors": [
     {
       "name": "Julia Jung",
       "position": "President",
-      "pic": "member1.jpg"
+      "pic": "member1.jpg",
+      "department": "designer"
     },
     {
       "name": "Paul Davison",
       "position": "Front-end Engineer",
-      "pic": "member4.jpg"
+      "pic": "member4.jpg",
+      "department": "publisher"
     }
   ]
 }

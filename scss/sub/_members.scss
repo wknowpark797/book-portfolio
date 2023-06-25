@@ -146,18 +146,13 @@
 
 				li {
 					width: auto;
-
-					a {
-						font-size: 32px;
-						font-weight: 700;
-						color: #dfdfdf;
-						transition: 0.2s;
-					}
+					font-size: 32px;
+					font-weight: 700;
+					color: #dfdfdf;
+					cursor: pointer;
 
 					&.swiper-slide-active {
-						a {
-							color: #555;
-						}
+						color: #555;
 					}
 				}
 			}
@@ -534,9 +529,7 @@
 			.tab {
 				ul {
 					li {
-						a {
-							font-size: 24px;
-						}
+						font-size: 24px;
 					}
 				}
 			}

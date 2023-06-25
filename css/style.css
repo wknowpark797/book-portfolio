@@ -1674,14 +1674,12 @@ label {
 }
 .members .intro-person .tab ul li {
   width: auto;
-}
-.members .intro-person .tab ul li a {
   font-size: 32px;
   font-weight: 700;
   color: #dfdfdf;
-  transition: 0.2s;
+  cursor: pointer;
 }
-.members .intro-person .tab ul li.swiper-slide-active a {
+.members .intro-person .tab ul li.swiper-slide-active {
   color: #555;
 }
 .members .intro-person .inner-person {
@@ -1927,7 +1925,7 @@ label {
     right: auto;
     text-align: center;
   }
-  .members .intro-person .tab ul li a {
+  .members .intro-person .tab ul li {
     font-size: 24px;
   }
   .members .intro-person .inner-person {

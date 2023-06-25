@@ -1,20 +1,26 @@
 const membersWrap = document.querySelector('#membersWrap');
 const directorsWrap = document.querySelector('#directorsWrap');
+const slideList = document.querySelectorAll('.membersSwiper .swiper-slide');
+let activeSlideIdx = 0;
 
-let membersTags = '';
-let directorsTags = '';
+memberFetch();
+directorFetch();
 
 // 멤버 데이터 Fetching
-fetch('DB/members.json')
-	.then((res) => {
-		return res.json();
-	})
-	.then((data) => {
-		const membersArr = data.members;
-		console.log(membersArr);
+function memberFetch() {
+	const key = slideList[activeSlideIdx].dataset.key;
+	let membersTags = '';
 
-		membersArr.forEach((member) => {
-			membersTags += `
+	fetch('DB/members.json')
+		.then((res) => {
+			return res.json();
+		})
+		.then((data) => {
+			const membersArr = data.members.filter((item) => item.department === key);
+			console.log(membersArr);
+
+			membersArr.forEach((member) => {
+				membersTags += `
         <article>
           <div class="img-box">
             <img src="img/members/${member.pic}" alt="">
@@ -25,26 +31,29 @@ fetch('DB/members.json')
           </div>
         </article>
       `;
-		});
+			});
 
-		console.log(membersTags);
-		membersWrap.innerHTML = membersTags;
-	})
-	.catch((err) => {
-		console.log(err);
-	});
+			membersWrap.innerHTML = membersTags;
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+}
 
 // 디렉터 데이터 Fetching
-fetch('DB/members.json')
-	.then((res) => {
-		return res.json();
-	})
-	.then((data) => {
-		const directorsArr = data.directors;
-		console.log(directorsArr);
+function directorFetch() {
+	let directorsTags = '';
 
-		directorsArr.forEach((member) => {
-			directorsTags += `
+	fetch('DB/members.json')
+		.then((res) => {
+			return res.json();
+		})
+		.then((data) => {
+			const directorsArr = data.directors;
+			console.log(directorsArr);
+
+			directorsArr.forEach((member) => {
+				directorsTags += `
         <article>
           <div class="img-box">
             <img src="img/members/${member.pic}" alt="">
@@ -55,14 +64,14 @@ fetch('DB/members.json')
           </div>
         </article>
       `;
-		});
+			});
 
-		console.log(directorsTags);
-		directorsWrap.innerHTML = directorsTags;
-	})
-	.catch((err) => {
-		console.log(err);
-	});
+			directorsWrap.innerHTML = directorsTags;
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+}
 
 // Swiper
 const swiper = new Swiper('.membersSwiper', {
@@ -74,6 +83,15 @@ const swiper = new Swiper('.membersSwiper', {
 		},
 		600: {
 			spaceBetween: 50,
+		},
+	},
+	on: {
+		slideChange(e) {
+			activeSlideIdx = e.activeIndex;
+			memberFetch();
+		},
+		click(e) {
+			swiper.slideTo(e.clickedIndex);
 		},
 	},
 });
