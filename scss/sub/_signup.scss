@@ -13,6 +13,9 @@
 			width: 480px;
 			padding-top: 35px;
 			margin-right: 70px;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
 
 			.title-wrap {
 				h2 {
@@ -303,6 +306,7 @@
 			.desc-wrap {
 				margin: 0 auto;
 				padding-top: 0;
+				position: relative;
 
 				.change-wrap {
 					display: none;

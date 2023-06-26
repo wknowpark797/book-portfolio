@@ -2387,6 +2387,9 @@ label {
   width: 480px;
   padding-top: 35px;
   margin-right: 70px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 .sign-up .inner-container .desc-wrap .title-wrap h2 {
   font-family: "Noto Serif KR";
@@ -2624,6 +2627,7 @@ label {
   .sign-up .inner-container .desc-wrap {
     margin: 0 auto;
     padding-top: 0;
+    position: relative;
   }
   .sign-up .inner-container .desc-wrap .change-wrap {
     display: none;
