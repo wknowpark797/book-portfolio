@@ -9,6 +9,8 @@ const userId = '105834502729522452212';
 const shelf = '1002';
 const listURL = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes?maxResults=30`;
 
+const ratingList = [5, 4, 3, 4, 5];
+
 fetchData(listURL);
 
 /*
@@ -59,7 +61,7 @@ async function fetchData(url) {
 function createDOM(arr) {
 	let tags = '';
 
-	arr.forEach((item) => {
+	arr.forEach((item, idx) => {
 		const imgOriginReplace = item.volumeInfo.imageLinks.thumbnail
 			.replace('zoom=1', 'zoom=10')
 			.replace('edge=curl', 'edge=');
@@ -72,13 +74,23 @@ function createDOM(arr) {
 
           <div class="rating-wrap">
             <div class="star-box">
-              <span class="on"><i class="fa-solid fa-star"></i></span>
-              <span class="on"><i class="fa-solid fa-star"></i></span>
-              <span class="on"><i class="fa-solid fa-star"></i></span>
-              <span><i class="fa-solid fa-star"></i></span>
-              <span><i class="fa-solid fa-star"></i></span>
+              <span class=${ratingList[idx] >= 1 ? 'on' : ''}>
+								<i class="fa-solid fa-star"></i>
+							</span>
+							<span class=${ratingList[idx] >= 2 ? 'on' : ''}>
+								<i class="fa-solid fa-star"></i>
+							</span>
+							<span class=${ratingList[idx] >= 3 ? 'on' : ''}>
+								<i class="fa-solid fa-star"></i>
+							</span>
+							<span class=${ratingList[idx] >= 4 ? 'on' : ''}>
+								<i class="fa-solid fa-star"></i>
+							</span>
+							<span class=${ratingList[idx] >= 5 ? 'on' : ''}>
+								<i class="fa-solid fa-star"></i>
+							</span>
             </div>
-            <p>3.0</p>
+            <p>${ratingList[idx] + '.0'}</p>
           </div>
 
           <p class="content">${item.volumeInfo.description}</p>
