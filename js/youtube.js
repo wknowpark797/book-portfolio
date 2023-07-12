@@ -1,4 +1,4 @@
-const key = 'AIzaSyDwb_57BfoNHLxlZ-Mwn2O3VNVt2tFNNMw';
+const key = 'AIzaSyA4f3SqOYivsLVITR7K6g5K0QrKhvUZ7hw';
 const baseURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${key}&part=snippet`;
 
 const musicListWrap = document.querySelector('#musicListWrap');
@@ -6,13 +6,12 @@ const bestListWarp = document.querySelector('#bestListWarp');
 const bookListWrap = document.querySelector('#bookListWrap');
 
 musicListFetch();
-bestListFetch();
-bookListFecth();
+readListFetch();
 
-// Music Playlist Fetching 함수
+// music 재생목록 fetching
 async function musicListFetch() {
-	const playlistId = 'PLEJLcTMBRARd4AKwM7CM_0gf2mKviNR3J';
-	const maxResults = 6;
+	const playlistId = 'PLuYjs7JL1VFD0-B09gEumiJn43AM-qpNR';
+	const maxResults = 3;
 	const listURL = `${baseURL}&playlistId=${playlistId}&maxResults=${maxResults}`;
 
 	const res = await fetch(listURL);
@@ -21,28 +20,17 @@ async function musicListFetch() {
 	createBasicTags(musicListWrap, data.items);
 }
 
-// Best Playlist Fetching 함수
-async function bestListFetch() {
-	const playlistId = 'PLEJLcTMBRARf9Oh5Ba53RTD69_uhRbXqS';
-	const maxResults = 1;
+// read 재생목록 fetching
+async function readListFetch() {
+	const playlistId = 'PLuYjs7JL1VFB-ciaLcIPXzqp2xmSiL_Wd';
+	const maxResults = 4;
 	const listURL = `${baseURL}&playlistId=${playlistId}&maxResults=${maxResults}`;
 
 	const res = await fetch(listURL);
 	const data = await res.json();
 
-	createBestTags(bestListWarp, data.items);
-}
-
-// Book Playlist Fetching 함수
-async function bookListFecth() {
-	const playlistId = 'PLEJLcTMBRAReQQjFb4VKHfgOsgE1Yj8d-';
-	const maxResults = 3;
-	const listURL = `${baseURL}&playlistId=${playlistId}&maxResults=${maxResults}`;
-
-	const res = await fetch(listURL);
-	const data = await res.json();
-
-	createBasicTags(bookListWrap, data.items);
+	createBestTags(bestListWarp, data.items.slice(0, 1));
+	createBasicTags(bookListWrap, data.items.slice(1, 4));
 }
 
 // 기본 목록 생성 함수

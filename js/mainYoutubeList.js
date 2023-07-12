@@ -1,4 +1,4 @@
-const key = 'AIzaSyDwb_57BfoNHLxlZ-Mwn2O3VNVt2tFNNMw';
+const key = 'AIzaSyA4f3SqOYivsLVITR7K6g5K0QrKhvUZ7hw';
 const baseURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${key}&part=snippet`;
 
 const mainYoutubeWrap = document.querySelector('#mainYoutubeWrap');
@@ -6,7 +6,7 @@ const mainYoutubeWrap = document.querySelector('#mainYoutubeWrap');
 bookListFecth();
 
 async function bookListFecth() {
-	const playlistId = 'PLEJLcTMBRAReQQjFb4VKHfgOsgE1Yj8d-';
+	const playlistId = 'PLuYjs7JL1VFB-ciaLcIPXzqp2xmSiL_Wd';
 	const maxResults = 2;
 	const listURL = `${baseURL}&playlistId=${playlistId}&maxResults=${maxResults}`;
 
